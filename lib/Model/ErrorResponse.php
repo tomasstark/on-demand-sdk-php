@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * ErrorResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class ErrorResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\Swagger\Client\Model\ErrorDetail[]'
+        'errors' => '\Oda\Client\Model\ErrorDetail[]'
     ];
 
     /**
@@ -178,7 +178,7 @@ class ErrorResponse implements ArrayAccess
 
     /**
      * Gets errors
-     * @return \Swagger\Client\Model\ErrorDetail[]
+     * @return \Oda\Client\Model\ErrorDetail[]
      */
     public function getErrors()
     {
@@ -187,7 +187,7 @@ class ErrorResponse implements ArrayAccess
 
     /**
      * Sets errors
-     * @param \Swagger\Client\Model\ErrorDetail[] $errors
+     * @param \Oda\Client\Model\ErrorDetail[] $errors
      * @return $this
      */
     public function setErrors($errors)
@@ -248,10 +248,10 @@ class ErrorResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

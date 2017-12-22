@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * CallbackRequest Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class CallbackRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'credentials' => '\Swagger\Client\Model\CallbackCredentials',
+        'credentials' => '\Oda\Client\Model\CallbackCredentials',
         'uri' => 'string'
     ];
 
@@ -184,7 +184,7 @@ class CallbackRequest implements ArrayAccess
 
     /**
      * Gets credentials
-     * @return \Swagger\Client\Model\CallbackCredentials
+     * @return \Oda\Client\Model\CallbackCredentials
      */
     public function getCredentials()
     {
@@ -193,7 +193,7 @@ class CallbackRequest implements ArrayAccess
 
     /**
      * Sets credentials
-     * @param \Swagger\Client\Model\CallbackCredentials $credentials
+     * @param \Oda\Client\Model\CallbackCredentials $credentials
      * @return $this
      */
     public function setCredentials($credentials)
@@ -275,10 +275,10 @@ class CallbackRequest implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -20,7 +20,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -42,18 +42,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Oda\Client\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Oda\Client\ApiClient;
+use \Oda\Client\ApiException;
+use \Oda\Client\Configuration;
+use \Oda\Client\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,16 +62,16 @@ class DefaultApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Oda\Client\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Oda\Client\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Oda\Client\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -83,7 +83,7 @@ class DefaultApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Oda\Client\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -93,11 +93,11 @@ class DefaultApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Oda\Client\ApiClient $apiClient set the API client
      *
      * @return DefaultApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Oda\Client\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -106,8 +106,8 @@ class DefaultApi
     /**
      * Operation billingCodesGet
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\BillingCodesResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\BillingCodesResponse
      */
     public function billingCodesGet()
     {
@@ -118,8 +118,8 @@ class DefaultApi
     /**
      * Operation billingCodesGetWithHttpInfo
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\BillingCodesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\BillingCodesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function billingCodesGetWithHttpInfo()
     {
@@ -150,15 +150,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\BillingCodesResponse',
+                '\Oda\Client\Model\BillingCodesResponse',
                 '/billing-codes'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BillingCodesResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\BillingCodesResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BillingCodesResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\BillingCodesResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -192,8 +192,8 @@ class DefaultApi
      * @param string $family_name  (optional)
      * @param string $client_reference_id  (optional)
      * @param string $email  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CandidateResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\CandidateResponse
      */
     public function candidatesGet($limit = null, $offset = null, $given_name = null, $family_name = null, $client_reference_id = null, $email = null)
     {
@@ -210,8 +210,8 @@ class DefaultApi
      * @param string $family_name  (optional)
      * @param string $client_reference_id  (optional)
      * @param string $email  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesGetWithHttpInfo($limit = null, $offset = null, $given_name = null, $family_name = null, $client_reference_id = null, $email = null)
     {
@@ -266,15 +266,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CandidateResponse',
+                '\Oda\Client\Model\CandidateResponse',
                 '/candidates'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CandidateResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\CandidateResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -303,8 +303,8 @@ class DefaultApi
      * Operation candidatesIdDocumentsGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CandidateDocumentResponse[]
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\CandidateDocumentResponse[]
      */
     public function candidatesIdDocumentsGet($id)
     {
@@ -316,8 +316,8 @@ class DefaultApi
      * Operation candidatesIdDocumentsGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CandidateDocumentResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\CandidateDocumentResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesIdDocumentsGetWithHttpInfo($id)
     {
@@ -360,15 +360,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CandidateDocumentResponse[]',
+                '\Oda\Client\Model\CandidateDocumentResponse[]',
                 '/candidates/{id}/documents'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CandidateDocumentResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\CandidateDocumentResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CandidateDocumentResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\CandidateDocumentResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -399,7 +399,7 @@ class DefaultApi
      * @param string $id  (required)
      * @param string $accept  (required)
      * @param string $file_name  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return void
      */
     public function candidatesIdDocumentsPost($id, $accept, $file_name = null)
@@ -414,7 +414,7 @@ class DefaultApi
      * @param string $id  (required)
      * @param string $accept  (required)
      * @param string $file_name  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesIdDocumentsPostWithHttpInfo($id, $accept, $file_name = null)
@@ -478,7 +478,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -486,7 +486,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 415:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -511,8 +511,8 @@ class DefaultApi
      * Operation candidatesIdGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CandidateResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\CandidateResponse
      */
     public function candidatesIdGet($id)
     {
@@ -524,8 +524,8 @@ class DefaultApi
      * Operation candidatesIdGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesIdGetWithHttpInfo($id)
     {
@@ -568,15 +568,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CandidateResponse',
+                '\Oda\Client\Model\CandidateResponse',
                 '/candidates/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CandidateResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\CandidateResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -605,9 +605,9 @@ class DefaultApi
      * Operation candidatesIdPut
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\CandidateRequest $candidate_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CandidateResponse
+     * @param \Oda\Client\Model\CandidateRequest $candidate_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\CandidateResponse
      */
     public function candidatesIdPut($id, $candidate_request)
     {
@@ -619,9 +619,9 @@ class DefaultApi
      * Operation candidatesIdPutWithHttpInfo
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\CandidateRequest $candidate_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\CandidateRequest $candidate_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesIdPutWithHttpInfo($id, $candidate_request)
     {
@@ -673,19 +673,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CandidateResponse',
+                '\Oda\Client\Model\CandidateResponse',
                 '/candidates/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CandidateResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\CandidateResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -693,7 +693,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -718,9 +718,9 @@ class DefaultApi
      * Operation candidatesIdTrustPost
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\TrustedUserRequest $trusted_user_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TrustedUserResponse
+     * @param \Oda\Client\Model\TrustedUserRequest $trusted_user_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\TrustedUserResponse
      */
     public function candidatesIdTrustPost($id, $trusted_user_request)
     {
@@ -732,9 +732,9 @@ class DefaultApi
      * Operation candidatesIdTrustPostWithHttpInfo
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\TrustedUserRequest $trusted_user_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\TrustedUserRequest $trusted_user_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesIdTrustPostWithHttpInfo($id, $trusted_user_request)
     {
@@ -786,19 +786,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TrustedUserResponse',
+                '\Oda\Client\Model\TrustedUserResponse',
                 '/candidates/{id}/trust'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -826,9 +826,9 @@ class DefaultApi
     /**
      * Operation candidatesPost
      *
-     * @param \Swagger\Client\Model\CandidateRequest $candidate_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CandidateResponse
+     * @param \Oda\Client\Model\CandidateRequest $candidate_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\CandidateResponse
      */
     public function candidatesPost($candidate_request)
     {
@@ -839,9 +839,9 @@ class DefaultApi
     /**
      * Operation candidatesPostWithHttpInfo
      *
-     * @param \Swagger\Client\Model\CandidateRequest $candidate_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\CandidateRequest $candidate_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\CandidateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function candidatesPostWithHttpInfo($candidate_request)
     {
@@ -881,19 +881,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CandidateResponse',
+                '\Oda\Client\Model\CandidateResponse',
                 '/candidates'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\CandidateResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CandidateResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\CandidateResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -901,7 +901,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -926,8 +926,8 @@ class DefaultApi
      * Operation healthGet
      *
      * @param string $deep  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\HealthResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\HealthResponse
      */
     public function healthGet($deep = null)
     {
@@ -939,8 +939,8 @@ class DefaultApi
      * Operation healthGetWithHttpInfo
      *
      * @param string $deep  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\HealthResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\HealthResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function healthGetWithHttpInfo($deep = null)
     {
@@ -975,19 +975,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\HealthResponse',
+                '\Oda\Client\Model\HealthResponse',
                 '/health'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\HealthResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\HealthResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\HealthResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\HealthResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1016,8 +1016,8 @@ class DefaultApi
      * Operation identitiesIdGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\IdentityResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\IdentityResponse
      */
     public function identitiesIdGet($id)
     {
@@ -1029,8 +1029,8 @@ class DefaultApi
      * Operation identitiesIdGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function identitiesIdGetWithHttpInfo($id)
     {
@@ -1073,15 +1073,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\IdentityResponse',
+                '\Oda\Client\Model\IdentityResponse',
                 '/identities/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1110,8 +1110,8 @@ class DefaultApi
      * Operation identitiesIdRetryPost
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\IdentityResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\IdentityResponse
      */
     public function identitiesIdRetryPost($id)
     {
@@ -1123,8 +1123,8 @@ class DefaultApi
      * Operation identitiesIdRetryPostWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function identitiesIdRetryPostWithHttpInfo($id)
     {
@@ -1167,15 +1167,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\IdentityResponse',
+                '\Oda\Client\Model\IdentityResponse',
                 '/identities/{id}/retry'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1183,11 +1183,11 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 422:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -1212,9 +1212,9 @@ class DefaultApi
      * Operation identitiesIdVerificationPut
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\VerificationRequest $verification_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\IdentityResponse
+     * @param \Oda\Client\Model\VerificationRequest $verification_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\IdentityResponse
      */
     public function identitiesIdVerificationPut($id, $verification_request)
     {
@@ -1226,9 +1226,9 @@ class DefaultApi
      * Operation identitiesIdVerificationPutWithHttpInfo
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\VerificationRequest $verification_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\VerificationRequest $verification_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function identitiesIdVerificationPutWithHttpInfo($id, $verification_request)
     {
@@ -1280,19 +1280,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\IdentityResponse',
+                '\Oda\Client\Model\IdentityResponse',
                 '/identities/{id}/verification'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1300,7 +1300,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 422:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -1324,9 +1324,9 @@ class DefaultApi
     /**
      * Operation identitiesPost
      *
-     * @param \Swagger\Client\Model\IdentityRequest $identity_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\IdentityResponse
+     * @param \Oda\Client\Model\IdentityRequest $identity_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\IdentityResponse
      */
     public function identitiesPost($identity_request)
     {
@@ -1337,9 +1337,9 @@ class DefaultApi
     /**
      * Operation identitiesPostWithHttpInfo
      *
-     * @param \Swagger\Client\Model\IdentityRequest $identity_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\IdentityRequest $identity_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\IdentityResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function identitiesPostWithHttpInfo($identity_request)
     {
@@ -1379,19 +1379,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\IdentityResponse',
+                '\Oda\Client\Model\IdentityResponse',
                 '/identities'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\IdentityResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1403,7 +1403,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 501:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\IdentityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\IdentityResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 502:
@@ -1424,8 +1424,8 @@ class DefaultApi
      * Operation packagesGet
      *
      * @param string $all  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\PackageResponse[]
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\PackageResponse[]
      */
     public function packagesGet($all = null)
     {
@@ -1437,8 +1437,8 @@ class DefaultApi
      * Operation packagesGetWithHttpInfo
      *
      * @param string $all  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\PackageResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\PackageResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function packagesGetWithHttpInfo($all = null)
     {
@@ -1473,15 +1473,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PackageResponse[]',
+                '\Oda\Client\Model\PackageResponse[]',
                 '/packages'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PackageResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\PackageResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PackageResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\PackageResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1511,8 +1511,8 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $candidate_id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\PackagePriceResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\PackagePriceResponse
      */
     public function packagesIdPriceGet($id, $candidate_id)
     {
@@ -1525,8 +1525,8 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $candidate_id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\PackagePriceResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\PackagePriceResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function packagesIdPriceGetWithHttpInfo($id, $candidate_id)
     {
@@ -1577,19 +1577,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\PackagePriceResponse',
+                '\Oda\Client\Model\PackagePriceResponse',
                 '/packages/{id}/price'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\PackagePriceResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\PackagePriceResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\PackagePriceResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\PackagePriceResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1617,8 +1617,8 @@ class DefaultApi
     /**
      * Operation referenceCodesGet
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ReferenceCodesResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\ReferenceCodesResponse
      */
     public function referenceCodesGet()
     {
@@ -1629,8 +1629,8 @@ class DefaultApi
     /**
      * Operation referenceCodesGetWithHttpInfo
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ReferenceCodesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\ReferenceCodesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function referenceCodesGetWithHttpInfo()
     {
@@ -1661,15 +1661,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ReferenceCodesResponse',
+                '\Oda\Client\Model\ReferenceCodesResponse',
                 '/reference-codes'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ReferenceCodesResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\ReferenceCodesResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ReferenceCodesResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ReferenceCodesResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1697,8 +1697,8 @@ class DefaultApi
     /**
      * Operation screeningsGet
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ScreeningSummaryResponse[]
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\ScreeningSummaryResponse[]
      */
     public function screeningsGet()
     {
@@ -1709,8 +1709,8 @@ class DefaultApi
     /**
      * Operation screeningsGetWithHttpInfo
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ScreeningSummaryResponse[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\ScreeningSummaryResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsGetWithHttpInfo()
     {
@@ -1741,15 +1741,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ScreeningSummaryResponse[]',
+                '\Oda\Client\Model\ScreeningSummaryResponse[]',
                 '/screenings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ScreeningSummaryResponse[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\ScreeningSummaryResponse[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ScreeningSummaryResponse[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ScreeningSummaryResponse[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1778,8 +1778,8 @@ class DefaultApi
      * Operation screeningsIdAdverseActionsPost
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\AdverseActionRequest $adverse_action_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @param \Oda\Client\Model\AdverseActionRequest $adverse_action_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return void
      */
     public function screeningsIdAdverseActionsPost($id, $adverse_action_request)
@@ -1792,8 +1792,8 @@ class DefaultApi
      * Operation screeningsIdAdverseActionsPostWithHttpInfo
      *
      * @param string $id  (required)
-     * @param \Swagger\Client\Model\AdverseActionRequest $adverse_action_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @param \Oda\Client\Model\AdverseActionRequest $adverse_action_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdAdverseActionsPostWithHttpInfo($id, $adverse_action_request)
@@ -1854,7 +1854,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1886,7 +1886,7 @@ class DefaultApi
      * @param string $accept  (required)
      * @param string $document_type  (required)
      * @param string $party  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return void
      */
     public function screeningsIdDocumentsPost($id, $accept, $document_type, $party)
@@ -1902,7 +1902,7 @@ class DefaultApi
      * @param string $accept  (required)
      * @param string $document_type  (required)
      * @param string $party  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdDocumentsPostWithHttpInfo($id, $accept, $document_type, $party)
@@ -1978,7 +1978,7 @@ class DefaultApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -1986,7 +1986,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 415:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2011,8 +2011,8 @@ class DefaultApi
      * Operation screeningsIdGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ScreeningResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\ScreeningResponse
      */
     public function screeningsIdGet($id)
     {
@@ -2024,8 +2024,8 @@ class DefaultApi
      * Operation screeningsIdGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ScreeningResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\ScreeningResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdGetWithHttpInfo($id)
     {
@@ -2068,15 +2068,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ScreeningResponse',
+                '\Oda\Client\Model\ScreeningResponse',
                 '/screenings/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ScreeningResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\ScreeningResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ScreeningResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ScreeningResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2084,7 +2084,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ScreeningResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ScreeningResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2109,8 +2109,8 @@ class DefaultApi
      * Operation screeningsIdInvitePost
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InviteResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\InviteResponse
      */
     public function screeningsIdInvitePost($id)
     {
@@ -2122,8 +2122,8 @@ class DefaultApi
      * Operation screeningsIdInvitePostWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InviteResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\InviteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdInvitePostWithHttpInfo($id)
     {
@@ -2166,15 +2166,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InviteResponse',
+                '\Oda\Client\Model\InviteResponse',
                 '/screenings/{id}/invite'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InviteResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\InviteResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InviteResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\InviteResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2204,7 +2204,7 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $accept  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return map[string,string]
      */
     public function screeningsIdReportGet($id, $accept)
@@ -2218,7 +2218,7 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $accept  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of map[string,string], HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdReportGetWithHttpInfo($id, $accept)
@@ -2307,8 +2307,8 @@ class DefaultApi
      * Operation screeningsIdReportLinksPost
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\OneTimeReportLinkResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\OneTimeReportLinkResponse
      */
     public function screeningsIdReportLinksPost($id)
     {
@@ -2320,8 +2320,8 @@ class DefaultApi
      * Operation screeningsIdReportLinksPostWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\OneTimeReportLinkResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\OneTimeReportLinkResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdReportLinksPostWithHttpInfo($id)
     {
@@ -2364,15 +2364,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\OneTimeReportLinkResponse',
+                '\Oda\Client\Model\OneTimeReportLinkResponse',
                 '/screenings/{id}/report-links'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\OneTimeReportLinkResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\OneTimeReportLinkResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\OneTimeReportLinkResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\OneTimeReportLinkResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2380,7 +2380,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 422:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\OneTimeReportLinkResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\OneTimeReportLinkResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2406,7 +2406,7 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $token  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return map[string,string]
      */
     public function screeningsIdReportPdfGet($id, $token = null)
@@ -2420,7 +2420,7 @@ class DefaultApi
      *
      * @param string $id  (required)
      * @param string $token  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of map[string,string], HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsIdReportPdfGetWithHttpInfo($id, $token = null)
@@ -2504,10 +2504,10 @@ class DefaultApi
     /**
      * Operation screeningsPost
      *
-     * @param \Swagger\Client\Model\ScreeningRequest $screening_request  (required)
+     * @param \Oda\Client\Model\ScreeningRequest $screening_request  (required)
      * @param string $idempotency_key  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ScreeningResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\ScreeningResponse
      */
     public function screeningsPost($screening_request, $idempotency_key = null)
     {
@@ -2518,10 +2518,10 @@ class DefaultApi
     /**
      * Operation screeningsPostWithHttpInfo
      *
-     * @param \Swagger\Client\Model\ScreeningRequest $screening_request  (required)
+     * @param \Oda\Client\Model\ScreeningRequest $screening_request  (required)
      * @param string $idempotency_key  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ScreeningResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\ScreeningResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function screeningsPostWithHttpInfo($screening_request, $idempotency_key = null)
     {
@@ -2565,19 +2565,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ScreeningResponse',
+                '\Oda\Client\Model\ScreeningResponse',
                 '/screenings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ScreeningResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\ScreeningResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ScreeningResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ScreeningResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2585,7 +2585,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2610,8 +2610,8 @@ class DefaultApi
      * Operation subscriptionsIdDelete
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SubscriptionResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\SubscriptionResponse
      */
     public function subscriptionsIdDelete($id)
     {
@@ -2623,8 +2623,8 @@ class DefaultApi
      * Operation subscriptionsIdDeleteWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdDeleteWithHttpInfo($id)
     {
@@ -2667,15 +2667,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SubscriptionResponse',
+                '\Oda\Client\Model\SubscriptionResponse',
                 '/subscriptions/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2683,7 +2683,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2708,8 +2708,8 @@ class DefaultApi
      * Operation subscriptionsIdEventsGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SubscriptionEventsResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\SubscriptionEventsResponse
      */
     public function subscriptionsIdEventsGet($id)
     {
@@ -2721,8 +2721,8 @@ class DefaultApi
      * Operation subscriptionsIdEventsGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SubscriptionEventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\SubscriptionEventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdEventsGetWithHttpInfo($id)
     {
@@ -2765,15 +2765,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SubscriptionEventsResponse',
+                '\Oda\Client\Model\SubscriptionEventsResponse',
                 '/subscriptions/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SubscriptionEventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\SubscriptionEventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionEventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionEventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2781,7 +2781,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionEventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionEventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2806,8 +2806,8 @@ class DefaultApi
      * Operation subscriptionsIdGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SubscriptionResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\SubscriptionResponse
      */
     public function subscriptionsIdGet($id)
     {
@@ -2819,8 +2819,8 @@ class DefaultApi
      * Operation subscriptionsIdGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsIdGetWithHttpInfo($id)
     {
@@ -2863,15 +2863,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SubscriptionResponse',
+                '\Oda\Client\Model\SubscriptionResponse',
                 '/subscriptions/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2879,7 +2879,7 @@ class DefaultApi
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -2903,9 +2903,9 @@ class DefaultApi
     /**
      * Operation subscriptionsPost
      *
-     * @param \Swagger\Client\Model\SubscriptionRequest $subscription_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SubscriptionResponse
+     * @param \Oda\Client\Model\SubscriptionRequest $subscription_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\SubscriptionResponse
      */
     public function subscriptionsPost($subscription_request)
     {
@@ -2916,9 +2916,9 @@ class DefaultApi
     /**
      * Operation subscriptionsPostWithHttpInfo
      *
-     * @param \Swagger\Client\Model\SubscriptionRequest $subscription_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\SubscriptionRequest $subscription_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\SubscriptionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionsPostWithHttpInfo($subscription_request)
     {
@@ -2958,19 +2958,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SubscriptionResponse',
+                '\Oda\Client\Model\SubscriptionResponse',
                 '/subscriptions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\SubscriptionResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\SubscriptionResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -2999,8 +2999,8 @@ class DefaultApi
      * Operation trustedUsersIdGet
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TrustedUserResponse
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\TrustedUserResponse
      */
     public function trustedUsersIdGet($id)
     {
@@ -3012,8 +3012,8 @@ class DefaultApi
      * Operation trustedUsersIdGetWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function trustedUsersIdGetWithHttpInfo($id)
     {
@@ -3056,15 +3056,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TrustedUserResponse',
+                '\Oda\Client\Model\TrustedUserResponse',
                 '/trusted-users/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -3092,9 +3092,9 @@ class DefaultApi
     /**
      * Operation trustedUsersPost
      *
-     * @param \Swagger\Client\Model\TrustedUserRequest $trusted_user_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\TrustedUserResponse
+     * @param \Oda\Client\Model\TrustedUserRequest $trusted_user_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return \Oda\Client\Model\TrustedUserResponse
      */
     public function trustedUsersPost($trusted_user_request)
     {
@@ -3105,9 +3105,9 @@ class DefaultApi
     /**
      * Operation trustedUsersPostWithHttpInfo
      *
-     * @param \Swagger\Client\Model\TrustedUserRequest $trusted_user_request  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \Oda\Client\Model\TrustedUserRequest $trusted_user_request  (required)
+     * @throws \Oda\Client\ApiException on non-2xx response
+     * @return array of \Oda\Client\Model\TrustedUserResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function trustedUsersPostWithHttpInfo($trusted_user_request)
     {
@@ -3147,19 +3147,19 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\TrustedUserResponse',
+                '\Oda\Client\Model\TrustedUserResponse',
                 '/trusted-users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Oda\Client\Model\TrustedUserResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\TrustedUserResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ErrorResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Oda\Client\Model\ErrorResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -3188,7 +3188,7 @@ class DefaultApi
      * Operation trustsIdDelete
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return void
      */
     public function trustsIdDelete($id)
@@ -3201,7 +3201,7 @@ class DefaultApi
      * Operation trustsIdDeleteWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Oda\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function trustsIdDeleteWithHttpInfo($id)

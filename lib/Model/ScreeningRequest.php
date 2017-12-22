@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * ScreeningRequest Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -71,11 +71,11 @@ class ScreeningRequest implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'billing_code' => 'string',
-        'callback' => '\Swagger\Client\Model\CallbackRequest',
+        'callback' => '\Oda\Client\Model\CallbackRequest',
         'candidate_id' => 'string',
-        'invite' => '\Swagger\Client\Model\Invite',
+        'invite' => '\Oda\Client\Model\Invite',
         'package_id' => 'string',
-        'reference_codes' => '\Swagger\Client\Model\ReferenceCode[]',
+        'reference_codes' => '\Oda\Client\Model\ReferenceCode[]',
         'trusted_user_id' => 'string'
     ];
 
@@ -235,7 +235,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Gets callback
-     * @return \Swagger\Client\Model\CallbackRequest
+     * @return \Oda\Client\Model\CallbackRequest
      */
     public function getCallback()
     {
@@ -244,7 +244,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Sets callback
-     * @param \Swagger\Client\Model\CallbackRequest $callback
+     * @param \Oda\Client\Model\CallbackRequest $callback
      * @return $this
      */
     public function setCallback($callback)
@@ -277,7 +277,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Gets invite
-     * @return \Swagger\Client\Model\Invite
+     * @return \Oda\Client\Model\Invite
      */
     public function getInvite()
     {
@@ -286,7 +286,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Sets invite
-     * @param \Swagger\Client\Model\Invite $invite
+     * @param \Oda\Client\Model\Invite $invite
      * @return $this
      */
     public function setInvite($invite)
@@ -319,7 +319,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Gets reference_codes
-     * @return \Swagger\Client\Model\ReferenceCode[]
+     * @return \Oda\Client\Model\ReferenceCode[]
      */
     public function getReferenceCodes()
     {
@@ -328,7 +328,7 @@ class ScreeningRequest implements ArrayAccess
 
     /**
      * Sets reference_codes
-     * @param \Swagger\Client\Model\ReferenceCode[] $reference_codes
+     * @param \Oda\Client\Model\ReferenceCode[] $reference_codes
      * @return $this
      */
     public function setReferenceCodes($reference_codes)
@@ -410,10 +410,10 @@ class ScreeningRequest implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

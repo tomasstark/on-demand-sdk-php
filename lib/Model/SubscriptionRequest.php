@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * SubscriptionRequest Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,8 +70,8 @@ class SubscriptionRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'schedule' => '\Swagger\Client\Model\Schedule',
-        'screening' => '\Swagger\Client\Model\ScreeningRequest'
+        'schedule' => '\Oda\Client\Model\Schedule',
+        'screening' => '\Oda\Client\Model\ScreeningRequest'
     ];
 
     /**
@@ -184,7 +184,7 @@ class SubscriptionRequest implements ArrayAccess
 
     /**
      * Gets schedule
-     * @return \Swagger\Client\Model\Schedule
+     * @return \Oda\Client\Model\Schedule
      */
     public function getSchedule()
     {
@@ -193,7 +193,7 @@ class SubscriptionRequest implements ArrayAccess
 
     /**
      * Sets schedule
-     * @param \Swagger\Client\Model\Schedule $schedule
+     * @param \Oda\Client\Model\Schedule $schedule
      * @return $this
      */
     public function setSchedule($schedule)
@@ -205,7 +205,7 @@ class SubscriptionRequest implements ArrayAccess
 
     /**
      * Gets screening
-     * @return \Swagger\Client\Model\ScreeningRequest
+     * @return \Oda\Client\Model\ScreeningRequest
      */
     public function getScreening()
     {
@@ -214,7 +214,7 @@ class SubscriptionRequest implements ArrayAccess
 
     /**
      * Sets screening
-     * @param \Swagger\Client\Model\ScreeningRequest $screening
+     * @param \Oda\Client\Model\ScreeningRequest $screening
      * @return $this
      */
     public function setScreening($screening)
@@ -275,10 +275,10 @@ class SubscriptionRequest implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

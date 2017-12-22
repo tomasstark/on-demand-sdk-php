@@ -1,4 +1,4 @@
-# Swagger\Client\DefaultApi
+# Oda\Client\DefaultApi
 
 All URIs are relative to *https://api-int.kennect.com/v1*
 
@@ -39,7 +39,7 @@ Method | HTTP request | Description
 
 
 # **billingCodesGet**
-> \Swagger\Client\Model\BillingCodesResponse billingCodesGet()
+> \Oda\Client\Model\BillingCodesResponse billingCodesGet()
 
 
 
@@ -48,7 +48,7 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 
 try {
     $result = $api_instance->billingCodesGet();
@@ -64,7 +64,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingCodesResponse**](../Model/BillingCodesResponse.md)
+[**\Oda\Client\Model\BillingCodesResponse**](../Model/BillingCodesResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesGet**
-> \Swagger\Client\Model\CandidateResponse candidatesGet($limit, $offset, $given_name, $family_name, $client_reference_id, $email)
+> \Oda\Client\Model\CandidateResponse candidatesGet($limit, $offset, $given_name, $family_name, $client_reference_id, $email)
 
 
 
@@ -87,7 +87,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $limit = "limit_example"; // string | 
 $offset = "offset_example"; // string | 
 $given_name = "given_name_example"; // string | 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+[**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesIdDocumentsGet**
-> \Swagger\Client\Model\CandidateDocumentResponse[] candidatesIdDocumentsGet($id)
+> \Oda\Client\Model\CandidateDocumentResponse[] candidatesIdDocumentsGet($id)
 
 
 
@@ -140,7 +140,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CandidateDocumentResponse[]**](../Model/CandidateDocumentResponse.md)
+[**\Oda\Client\Model\CandidateDocumentResponse[]**](../Model/CandidateDocumentResponse.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $accept = "accept_example"; // string | 
 $file_name = "file_name_example"; // string | 
@@ -220,7 +220,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesIdGet**
-> \Swagger\Client\Model\CandidateResponse candidatesIdGet($id)
+> \Oda\Client\Model\CandidateResponse candidatesIdGet($id)
 
 
 
@@ -229,7 +229,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+[**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesIdPut**
-> \Swagger\Client\Model\CandidateResponse candidatesIdPut($id, $candidate_request)
+> \Oda\Client\Model\CandidateResponse candidatesIdPut($id, $candidate_request)
 
 
 
@@ -272,9 +272,9 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$candidate_request = new \Swagger\Client\Model\CandidateRequest(); // \Swagger\Client\Model\CandidateRequest | 
+$candidate_request = new \Oda\Client\Model\CandidateRequest(); // \Oda\Client\Model\CandidateRequest | 
 
 try {
     $result = $api_instance->candidatesIdPut($id, $candidate_request);
@@ -290,11 +290,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **candidate_request** | [**\Swagger\Client\Model\CandidateRequest**](../Model/CandidateRequest.md)|  |
+ **candidate_request** | [**\Oda\Client\Model\CandidateRequest**](../Model/CandidateRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+[**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesIdTrustPost**
-> \Swagger\Client\Model\TrustedUserResponse candidatesIdTrustPost($id, $trusted_user_request)
+> \Oda\Client\Model\TrustedUserResponse candidatesIdTrustPost($id, $trusted_user_request)
 
 
 
@@ -317,9 +317,9 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$trusted_user_request = new \Swagger\Client\Model\TrustedUserRequest(); // \Swagger\Client\Model\TrustedUserRequest | 
+$trusted_user_request = new \Oda\Client\Model\TrustedUserRequest(); // \Oda\Client\Model\TrustedUserRequest | 
 
 try {
     $result = $api_instance->candidatesIdTrustPost($id, $trusted_user_request);
@@ -335,11 +335,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **trusted_user_request** | [**\Swagger\Client\Model\TrustedUserRequest**](../Model/TrustedUserRequest.md)|  |
+ **trusted_user_request** | [**\Oda\Client\Model\TrustedUserRequest**](../Model/TrustedUserRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
+[**\Oda\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
 
 ### Authorization
 
@@ -353,7 +353,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesPost**
-> \Swagger\Client\Model\CandidateResponse candidatesPost($candidate_request)
+> \Oda\Client\Model\CandidateResponse candidatesPost($candidate_request)
 
 
 
@@ -362,8 +362,8 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
-$candidate_request = new \Swagger\Client\Model\CandidateRequest(); // \Swagger\Client\Model\CandidateRequest | 
+$api_instance = new Oda\Client\Api\DefaultApi();
+$candidate_request = new \Oda\Client\Model\CandidateRequest(); // \Oda\Client\Model\CandidateRequest | 
 
 try {
     $result = $api_instance->candidatesPost($candidate_request);
@@ -378,11 +378,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **candidate_request** | [**\Swagger\Client\Model\CandidateRequest**](../Model/CandidateRequest.md)|  |
+ **candidate_request** | [**\Oda\Client\Model\CandidateRequest**](../Model/CandidateRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+[**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **healthGet**
-> \Swagger\Client\Model\HealthResponse healthGet($deep)
+> \Oda\Client\Model\HealthResponse healthGet($deep)
 
 
 
@@ -405,7 +405,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $deep = "deep_example"; // string | 
 
 try {
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\HealthResponse**](../Model/HealthResponse.md)
+[**\Oda\Client\Model\HealthResponse**](../Model/HealthResponse.md)
 
 ### Authorization
 
@@ -439,7 +439,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **identitiesIdGet**
-> \Swagger\Client\Model\IdentityResponse identitiesIdGet($id)
+> \Oda\Client\Model\IdentityResponse identitiesIdGet($id)
 
 
 
@@ -448,7 +448,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
+[**\Oda\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
 
 ### Authorization
 
@@ -482,7 +482,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **identitiesIdRetryPost**
-> \Swagger\Client\Model\IdentityResponse identitiesIdRetryPost($id)
+> \Oda\Client\Model\IdentityResponse identitiesIdRetryPost($id)
 
 
 
@@ -491,7 +491,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
+[**\Oda\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **identitiesIdVerificationPut**
-> \Swagger\Client\Model\IdentityResponse identitiesIdVerificationPut($id, $verification_request)
+> \Oda\Client\Model\IdentityResponse identitiesIdVerificationPut($id, $verification_request)
 
 
 
@@ -534,9 +534,9 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$verification_request = new \Swagger\Client\Model\VerificationRequest(); // \Swagger\Client\Model\VerificationRequest | 
+$verification_request = new \Oda\Client\Model\VerificationRequest(); // \Oda\Client\Model\VerificationRequest | 
 
 try {
     $result = $api_instance->identitiesIdVerificationPut($id, $verification_request);
@@ -552,11 +552,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **verification_request** | [**\Swagger\Client\Model\VerificationRequest**](../Model/VerificationRequest.md)|  |
+ **verification_request** | [**\Oda\Client\Model\VerificationRequest**](../Model/VerificationRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
+[**\Oda\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **identitiesPost**
-> \Swagger\Client\Model\IdentityResponse identitiesPost($identity_request)
+> \Oda\Client\Model\IdentityResponse identitiesPost($identity_request)
 
 
 
@@ -579,8 +579,8 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
-$identity_request = new \Swagger\Client\Model\IdentityRequest(); // \Swagger\Client\Model\IdentityRequest | 
+$api_instance = new Oda\Client\Api\DefaultApi();
+$identity_request = new \Oda\Client\Model\IdentityRequest(); // \Oda\Client\Model\IdentityRequest | 
 
 try {
     $result = $api_instance->identitiesPost($identity_request);
@@ -595,11 +595,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identity_request** | [**\Swagger\Client\Model\IdentityRequest**](../Model/IdentityRequest.md)|  |
+ **identity_request** | [**\Oda\Client\Model\IdentityRequest**](../Model/IdentityRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
+[**\Oda\Client\Model\IdentityResponse**](../Model/IdentityResponse.md)
 
 ### Authorization
 
@@ -613,7 +613,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesGet**
-> \Swagger\Client\Model\PackageResponse[] packagesGet($all)
+> \Oda\Client\Model\PackageResponse[] packagesGet($all)
 
 
 
@@ -622,7 +622,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $all = "all_example"; // string | 
 
 try {
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PackageResponse[]**](../Model/PackageResponse.md)
+[**\Oda\Client\Model\PackageResponse[]**](../Model/PackageResponse.md)
 
 ### Authorization
 
@@ -656,7 +656,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesIdPriceGet**
-> \Swagger\Client\Model\PackagePriceResponse packagesIdPriceGet($id, $candidate_id)
+> \Oda\Client\Model\PackagePriceResponse packagesIdPriceGet($id, $candidate_id)
 
 
 
@@ -665,7 +665,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $candidate_id = "candidate_id_example"; // string | 
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PackagePriceResponse**](../Model/PackagePriceResponse.md)
+[**\Oda\Client\Model\PackagePriceResponse**](../Model/PackagePriceResponse.md)
 
 ### Authorization
 
@@ -701,7 +701,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **referenceCodesGet**
-> \Swagger\Client\Model\ReferenceCodesResponse referenceCodesGet()
+> \Oda\Client\Model\ReferenceCodesResponse referenceCodesGet()
 
 
 
@@ -710,7 +710,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 
 try {
     $result = $api_instance->referenceCodesGet();
@@ -726,7 +726,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ReferenceCodesResponse**](../Model/ReferenceCodesResponse.md)
+[**\Oda\Client\Model\ReferenceCodesResponse**](../Model/ReferenceCodesResponse.md)
 
 ### Authorization
 
@@ -740,7 +740,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsGet**
-> \Swagger\Client\Model\ScreeningSummaryResponse[] screeningsGet()
+> \Oda\Client\Model\ScreeningSummaryResponse[] screeningsGet()
 
 
 
@@ -749,7 +749,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 
 try {
     $result = $api_instance->screeningsGet();
@@ -765,7 +765,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ScreeningSummaryResponse[]**](../Model/ScreeningSummaryResponse.md)
+[**\Oda\Client\Model\ScreeningSummaryResponse[]**](../Model/ScreeningSummaryResponse.md)
 
 ### Authorization
 
@@ -788,9 +788,9 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$adverse_action_request = new \Swagger\Client\Model\AdverseActionRequest(); // \Swagger\Client\Model\AdverseActionRequest | 
+$adverse_action_request = new \Oda\Client\Model\AdverseActionRequest(); // \Oda\Client\Model\AdverseActionRequest | 
 
 try {
     $api_instance->screeningsIdAdverseActionsPost($id, $adverse_action_request);
@@ -805,7 +805,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **adverse_action_request** | [**\Swagger\Client\Model\AdverseActionRequest**](../Model/AdverseActionRequest.md)|  |
+ **adverse_action_request** | [**\Oda\Client\Model\AdverseActionRequest**](../Model/AdverseActionRequest.md)|  |
 
 ### Return type
 
@@ -832,7 +832,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $accept = "accept_example"; // string | 
 $document_type = "document_type_example"; // string | 
@@ -871,7 +871,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdGet**
-> \Swagger\Client\Model\ScreeningResponse screeningsIdGet($id)
+> \Oda\Client\Model\ScreeningResponse screeningsIdGet($id)
 
 
 
@@ -880,7 +880,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -900,7 +900,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ScreeningResponse**](../Model/ScreeningResponse.md)
+[**\Oda\Client\Model\ScreeningResponse**](../Model/ScreeningResponse.md)
 
 ### Authorization
 
@@ -914,7 +914,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdInvitePost**
-> \Swagger\Client\Model\InviteResponse screeningsIdInvitePost($id)
+> \Oda\Client\Model\InviteResponse screeningsIdInvitePost($id)
 
 
 
@@ -923,7 +923,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -943,7 +943,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InviteResponse**](../Model/InviteResponse.md)
+[**\Oda\Client\Model\InviteResponse**](../Model/InviteResponse.md)
 
 ### Authorization
 
@@ -966,7 +966,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $accept = "accept_example"; // string | 
 
@@ -1002,7 +1002,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdReportLinksPost**
-> \Swagger\Client\Model\OneTimeReportLinkResponse screeningsIdReportLinksPost($id)
+> \Oda\Client\Model\OneTimeReportLinkResponse screeningsIdReportLinksPost($id)
 
 
 
@@ -1011,7 +1011,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1031,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\OneTimeReportLinkResponse**](../Model/OneTimeReportLinkResponse.md)
+[**\Oda\Client\Model\OneTimeReportLinkResponse**](../Model/OneTimeReportLinkResponse.md)
 
 ### Authorization
 
@@ -1054,7 +1054,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $token = "token_example"; // string | 
 
@@ -1090,7 +1090,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsPost**
-> \Swagger\Client\Model\ScreeningResponse screeningsPost($screening_request, $idempotency_key)
+> \Oda\Client\Model\ScreeningResponse screeningsPost($screening_request, $idempotency_key)
 
 
 
@@ -1099,8 +1099,8 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
-$screening_request = new \Swagger\Client\Model\ScreeningRequest(); // \Swagger\Client\Model\ScreeningRequest | 
+$api_instance = new Oda\Client\Api\DefaultApi();
+$screening_request = new \Oda\Client\Model\ScreeningRequest(); // \Oda\Client\Model\ScreeningRequest | 
 $idempotency_key = "idempotency_key_example"; // string | 
 
 try {
@@ -1116,12 +1116,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **screening_request** | [**\Swagger\Client\Model\ScreeningRequest**](../Model/ScreeningRequest.md)|  |
+ **screening_request** | [**\Oda\Client\Model\ScreeningRequest**](../Model/ScreeningRequest.md)|  |
  **idempotency_key** | **string**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ScreeningResponse**](../Model/ScreeningResponse.md)
+[**\Oda\Client\Model\ScreeningResponse**](../Model/ScreeningResponse.md)
 
 ### Authorization
 
@@ -1135,7 +1135,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdDelete**
-> \Swagger\Client\Model\SubscriptionResponse subscriptionsIdDelete($id)
+> \Oda\Client\Model\SubscriptionResponse subscriptionsIdDelete($id)
 
 
 
@@ -1144,7 +1144,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1164,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\Oda\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 
@@ -1178,7 +1178,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdEventsGet**
-> \Swagger\Client\Model\SubscriptionEventsResponse subscriptionsIdEventsGet($id)
+> \Oda\Client\Model\SubscriptionEventsResponse subscriptionsIdEventsGet($id)
 
 
 
@@ -1187,7 +1187,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1207,7 +1207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionEventsResponse**](../Model/SubscriptionEventsResponse.md)
+[**\Oda\Client\Model\SubscriptionEventsResponse**](../Model/SubscriptionEventsResponse.md)
 
 ### Authorization
 
@@ -1221,7 +1221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsIdGet**
-> \Swagger\Client\Model\SubscriptionResponse subscriptionsIdGet($id)
+> \Oda\Client\Model\SubscriptionResponse subscriptionsIdGet($id)
 
 
 
@@ -1230,7 +1230,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1250,7 +1250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\Oda\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 
@@ -1264,7 +1264,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsPost**
-> \Swagger\Client\Model\SubscriptionResponse subscriptionsPost($subscription_request)
+> \Oda\Client\Model\SubscriptionResponse subscriptionsPost($subscription_request)
 
 
 
@@ -1273,8 +1273,8 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
-$subscription_request = new \Swagger\Client\Model\SubscriptionRequest(); // \Swagger\Client\Model\SubscriptionRequest | 
+$api_instance = new Oda\Client\Api\DefaultApi();
+$subscription_request = new \Oda\Client\Model\SubscriptionRequest(); // \Oda\Client\Model\SubscriptionRequest | 
 
 try {
     $result = $api_instance->subscriptionsPost($subscription_request);
@@ -1289,11 +1289,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_request** | [**\Swagger\Client\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)|  |
+ **subscription_request** | [**\Oda\Client\Model\SubscriptionRequest**](../Model/SubscriptionRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+[**\Oda\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
 
 ### Authorization
 
@@ -1307,7 +1307,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trustedUsersIdGet**
-> \Swagger\Client\Model\TrustedUserResponse trustedUsersIdGet($id)
+> \Oda\Client\Model\TrustedUserResponse trustedUsersIdGet($id)
 
 
 
@@ -1316,7 +1316,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1336,7 +1336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
+[**\Oda\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
 
 ### Authorization
 
@@ -1350,7 +1350,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trustedUsersPost**
-> \Swagger\Client\Model\TrustedUserResponse trustedUsersPost($trusted_user_request)
+> \Oda\Client\Model\TrustedUserResponse trustedUsersPost($trusted_user_request)
 
 
 
@@ -1359,8 +1359,8 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
-$trusted_user_request = new \Swagger\Client\Model\TrustedUserRequest(); // \Swagger\Client\Model\TrustedUserRequest | 
+$api_instance = new Oda\Client\Api\DefaultApi();
+$trusted_user_request = new \Oda\Client\Model\TrustedUserRequest(); // \Oda\Client\Model\TrustedUserRequest | 
 
 try {
     $result = $api_instance->trustedUsersPost($trusted_user_request);
@@ -1375,11 +1375,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trusted_user_request** | [**\Swagger\Client\Model\TrustedUserRequest**](../Model/TrustedUserRequest.md)|  |
+ **trusted_user_request** | [**\Oda\Client\Model\TrustedUserRequest**](../Model/TrustedUserRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
+[**\Oda\Client\Model\TrustedUserResponse**](../Model/TrustedUserResponse.md)
 
 ### Authorization
 
@@ -1402,7 +1402,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 
 try {

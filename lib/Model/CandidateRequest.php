@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * CandidateRequest Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,12 +70,12 @@ class CandidateRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => '\Swagger\Client\Model\Address',
-        'aliases' => '\Swagger\Client\Model\CandidateAlias[]',
+        'address' => '\Oda\Client\Model\Address',
+        'aliases' => '\Oda\Client\Model\CandidateAlias[]',
         'client_reference_id' => 'string',
         'confirmed_no_middle_name' => 'bool',
         'dob' => 'string',
-        'drivers_license' => '\Swagger\Client\Model\DriversLicense',
+        'drivers_license' => '\Oda\Client\Model\DriversLicense',
         'email' => 'string',
         'family_name' => 'string',
         'given_name' => 'string',
@@ -244,7 +244,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Gets address
-     * @return \Swagger\Client\Model\Address
+     * @return \Oda\Client\Model\Address
      */
     public function getAddress()
     {
@@ -253,7 +253,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Swagger\Client\Model\Address $address
+     * @param \Oda\Client\Model\Address $address
      * @return $this
      */
     public function setAddress($address)
@@ -265,7 +265,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Gets aliases
-     * @return \Swagger\Client\Model\CandidateAlias[]
+     * @return \Oda\Client\Model\CandidateAlias[]
      */
     public function getAliases()
     {
@@ -274,7 +274,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Sets aliases
-     * @param \Swagger\Client\Model\CandidateAlias[] $aliases
+     * @param \Oda\Client\Model\CandidateAlias[] $aliases
      * @return $this
      */
     public function setAliases($aliases)
@@ -349,7 +349,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Gets drivers_license
-     * @return \Swagger\Client\Model\DriversLicense
+     * @return \Oda\Client\Model\DriversLicense
      */
     public function getDriversLicense()
     {
@@ -358,7 +358,7 @@ class CandidateRequest implements ArrayAccess
 
     /**
      * Sets drivers_license
-     * @param \Swagger\Client\Model\DriversLicense $drivers_license
+     * @param \Oda\Client\Model\DriversLicense $drivers_license
      * @return $this
      */
     public function setDriversLicense($drivers_license)
@@ -545,10 +545,10 @@ class CandidateRequest implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

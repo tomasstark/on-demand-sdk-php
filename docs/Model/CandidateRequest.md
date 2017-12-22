@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\Swagger\Client\Model\Address**](Address.md) |  | [optional] 
-**aliases** | [**\Swagger\Client\Model\CandidateAlias[]**](CandidateAlias.md) |  | [optional] 
+**address** | [**\Oda\Client\Model\Address**](Address.md) |  | [optional] 
+**aliases** | [**\Oda\Client\Model\CandidateAlias[]**](CandidateAlias.md) |  | [optional] 
 **client_reference_id** | **string** |  | [optional] 
 **confirmed_no_middle_name** | **bool** |  | [optional] 
 **dob** | **string** |  | [optional] 
-**drivers_license** | [**\Swagger\Client\Model\DriversLicense**](DriversLicense.md) |  | [optional] 
+**drivers_license** | [**\Oda\Client\Model\DriversLicense**](DriversLicense.md) |  | [optional] 
 **email** | **string** |  | [optional] 
 **family_name** | **string** |  | [optional] 
 **given_name** | **string** |  | [optional] 

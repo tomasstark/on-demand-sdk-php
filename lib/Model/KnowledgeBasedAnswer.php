@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * KnowledgeBasedAnswer Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,8 +70,8 @@ class KnowledgeBasedAnswer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'answers' => '\Swagger\Client\Model\Answer[]',
-        'questions' => '\Swagger\Client\Model\Question[]'
+        'answers' => '\Oda\Client\Model\Answer[]',
+        'questions' => '\Oda\Client\Model\Question[]'
     ];
 
     /**
@@ -184,7 +184,7 @@ class KnowledgeBasedAnswer implements ArrayAccess
 
     /**
      * Gets answers
-     * @return \Swagger\Client\Model\Answer[]
+     * @return \Oda\Client\Model\Answer[]
      */
     public function getAnswers()
     {
@@ -193,7 +193,7 @@ class KnowledgeBasedAnswer implements ArrayAccess
 
     /**
      * Sets answers
-     * @param \Swagger\Client\Model\Answer[] $answers
+     * @param \Oda\Client\Model\Answer[] $answers
      * @return $this
      */
     public function setAnswers($answers)
@@ -205,7 +205,7 @@ class KnowledgeBasedAnswer implements ArrayAccess
 
     /**
      * Gets questions
-     * @return \Swagger\Client\Model\Question[]
+     * @return \Oda\Client\Model\Question[]
      */
     public function getQuestions()
     {
@@ -214,7 +214,7 @@ class KnowledgeBasedAnswer implements ArrayAccess
 
     /**
      * Sets questions
-     * @param \Swagger\Client\Model\Question[] $questions
+     * @param \Oda\Client\Model\Question[] $questions
      * @return $this
      */
     public function setQuestions($questions)
@@ -275,10 +275,10 @@ class KnowledgeBasedAnswer implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

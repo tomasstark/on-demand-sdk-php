@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * ReferenceCodesResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class ReferenceCodesResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reference_codes' => '\Swagger\Client\Model\ReferenceCode[]'
+        'reference_codes' => '\Oda\Client\Model\ReferenceCode[]'
     ];
 
     /**
@@ -178,7 +178,7 @@ class ReferenceCodesResponse implements ArrayAccess
 
     /**
      * Gets reference_codes
-     * @return \Swagger\Client\Model\ReferenceCode[]
+     * @return \Oda\Client\Model\ReferenceCode[]
      */
     public function getReferenceCodes()
     {
@@ -187,7 +187,7 @@ class ReferenceCodesResponse implements ArrayAccess
 
     /**
      * Sets reference_codes
-     * @param \Swagger\Client\Model\ReferenceCode[] $reference_codes
+     * @param \Oda\Client\Model\ReferenceCode[] $reference_codes
      * @return $this
      */
     public function setReferenceCodes($reference_codes)
@@ -248,10 +248,10 @@ class ReferenceCodesResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

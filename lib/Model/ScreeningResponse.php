@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * ScreeningResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,18 +70,18 @@ class ScreeningResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'adverse_actions' => '\Swagger\Client\Model\AdverseActionResponse[]',
+        'adverse_actions' => '\Oda\Client\Model\AdverseActionResponse[]',
         'billing_code' => 'string',
-        'callback' => '\Swagger\Client\Model\CallbackResponse',
+        'callback' => '\Oda\Client\Model\CallbackResponse',
         'candidate_id' => 'string',
         'client_criteria_result' => 'string',
-        'dispute' => '\Swagger\Client\Model\Dispute',
+        'dispute' => '\Oda\Client\Model\Dispute',
         'id' => 'string',
-        'invite' => '\Swagger\Client\Model\Invite',
-        'links' => '\Swagger\Client\Model\ScreeningResponseLink',
+        'invite' => '\Oda\Client\Model\Invite',
+        'links' => '\Oda\Client\Model\ScreeningResponseLink',
         'package_id' => 'string',
-        'reference_codes' => '\Swagger\Client\Model\ReferenceCode[]',
-        'report_items' => '\Swagger\Client\Model\ScreeningResponseReportItem[]',
+        'reference_codes' => '\Oda\Client\Model\ReferenceCode[]',
+        'report_items' => '\Oda\Client\Model\ScreeningResponseReportItem[]',
         'result' => 'string',
         'status' => 'string',
         'submitted_at' => '\DateTime',
@@ -274,7 +274,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets adverse_actions
-     * @return \Swagger\Client\Model\AdverseActionResponse[]
+     * @return \Oda\Client\Model\AdverseActionResponse[]
      */
     public function getAdverseActions()
     {
@@ -283,7 +283,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets adverse_actions
-     * @param \Swagger\Client\Model\AdverseActionResponse[] $adverse_actions
+     * @param \Oda\Client\Model\AdverseActionResponse[] $adverse_actions
      * @return $this
      */
     public function setAdverseActions($adverse_actions)
@@ -316,7 +316,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets callback
-     * @return \Swagger\Client\Model\CallbackResponse
+     * @return \Oda\Client\Model\CallbackResponse
      */
     public function getCallback()
     {
@@ -325,7 +325,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets callback
-     * @param \Swagger\Client\Model\CallbackResponse $callback
+     * @param \Oda\Client\Model\CallbackResponse $callback
      * @return $this
      */
     public function setCallback($callback)
@@ -379,7 +379,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets dispute
-     * @return \Swagger\Client\Model\Dispute
+     * @return \Oda\Client\Model\Dispute
      */
     public function getDispute()
     {
@@ -388,7 +388,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets dispute
-     * @param \Swagger\Client\Model\Dispute $dispute
+     * @param \Oda\Client\Model\Dispute $dispute
      * @return $this
      */
     public function setDispute($dispute)
@@ -421,7 +421,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets invite
-     * @return \Swagger\Client\Model\Invite
+     * @return \Oda\Client\Model\Invite
      */
     public function getInvite()
     {
@@ -430,7 +430,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets invite
-     * @param \Swagger\Client\Model\Invite $invite
+     * @param \Oda\Client\Model\Invite $invite
      * @return $this
      */
     public function setInvite($invite)
@@ -442,7 +442,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Swagger\Client\Model\ScreeningResponseLink
+     * @return \Oda\Client\Model\ScreeningResponseLink
      */
     public function getLinks()
     {
@@ -451,7 +451,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Swagger\Client\Model\ScreeningResponseLink $links
+     * @param \Oda\Client\Model\ScreeningResponseLink $links
      * @return $this
      */
     public function setLinks($links)
@@ -484,7 +484,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets reference_codes
-     * @return \Swagger\Client\Model\ReferenceCode[]
+     * @return \Oda\Client\Model\ReferenceCode[]
      */
     public function getReferenceCodes()
     {
@@ -493,7 +493,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets reference_codes
-     * @param \Swagger\Client\Model\ReferenceCode[] $reference_codes
+     * @param \Oda\Client\Model\ReferenceCode[] $reference_codes
      * @return $this
      */
     public function setReferenceCodes($reference_codes)
@@ -505,7 +505,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Gets report_items
-     * @return \Swagger\Client\Model\ScreeningResponseReportItem[]
+     * @return \Oda\Client\Model\ScreeningResponseReportItem[]
      */
     public function getReportItems()
     {
@@ -514,7 +514,7 @@ class ScreeningResponse implements ArrayAccess
 
     /**
      * Sets report_items
-     * @param \Swagger\Client\Model\ScreeningResponseReportItem[] $report_items
+     * @param \Oda\Client\Model\ScreeningResponseReportItem[] $report_items
      * @return $this
      */
     public function setReportItems($report_items)
@@ -680,10 +680,10 @@ class ScreeningResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

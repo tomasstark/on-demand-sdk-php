@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**candidate** | [**\Swagger\Client\Model\CandidateResponse**](CandidateResponse.md) |  | [optional] 
+**candidate** | [**\Oda\Client\Model\CandidateResponse**](CandidateResponse.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **submitted_at** | [**\DateTime**](\DateTime.md) |  | [optional] 

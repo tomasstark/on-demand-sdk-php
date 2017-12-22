@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * SubscriptionResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -72,10 +72,10 @@ class SubscriptionResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'created_at' => '\DateTime',
         'id' => 'string',
-        'metrics' => '\Swagger\Client\Model\Metrics',
+        'metrics' => '\Oda\Client\Model\Metrics',
         'next_run_at' => '\DateTime',
-        'schedule' => '\Swagger\Client\Model\Schedule',
-        'screening' => '\Swagger\Client\Model\ScreeningRequest',
+        'schedule' => '\Oda\Client\Model\Schedule',
+        'screening' => '\Oda\Client\Model\ScreeningRequest',
         'status' => 'string',
         'updated_at' => '\DateTime'
     ];
@@ -262,7 +262,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Gets metrics
-     * @return \Swagger\Client\Model\Metrics
+     * @return \Oda\Client\Model\Metrics
      */
     public function getMetrics()
     {
@@ -271,7 +271,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Sets metrics
-     * @param \Swagger\Client\Model\Metrics $metrics
+     * @param \Oda\Client\Model\Metrics $metrics
      * @return $this
      */
     public function setMetrics($metrics)
@@ -304,7 +304,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Gets schedule
-     * @return \Swagger\Client\Model\Schedule
+     * @return \Oda\Client\Model\Schedule
      */
     public function getSchedule()
     {
@@ -313,7 +313,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Sets schedule
-     * @param \Swagger\Client\Model\Schedule $schedule
+     * @param \Oda\Client\Model\Schedule $schedule
      * @return $this
      */
     public function setSchedule($schedule)
@@ -325,7 +325,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Gets screening
-     * @return \Swagger\Client\Model\ScreeningRequest
+     * @return \Oda\Client\Model\ScreeningRequest
      */
     public function getScreening()
     {
@@ -334,7 +334,7 @@ class SubscriptionResponse implements ArrayAccess
 
     /**
      * Sets screening
-     * @param \Swagger\Client\Model\ScreeningRequest $screening
+     * @param \Oda\Client\Model\ScreeningRequest $screening
      * @return $this
      */
     public function setScreening($screening)
@@ -437,10 +437,10 @@ class SubscriptionResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

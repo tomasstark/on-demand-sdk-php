@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * Schedule Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -71,7 +71,7 @@ class Schedule implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'end_at' => '\DateTime',
-        'interval' => '\Swagger\Client\Model\Interval',
+        'interval' => '\Oda\Client\Model\Interval',
         'start_at' => '\DateTime'
     ];
 
@@ -211,7 +211,7 @@ class Schedule implements ArrayAccess
 
     /**
      * Gets interval
-     * @return \Swagger\Client\Model\Interval
+     * @return \Oda\Client\Model\Interval
      */
     public function getInterval()
     {
@@ -220,7 +220,7 @@ class Schedule implements ArrayAccess
 
     /**
      * Sets interval
-     * @param \Swagger\Client\Model\Interval $interval
+     * @param \Oda\Client\Model\Interval $interval
      * @return $this
      */
     public function setInterval($interval)
@@ -302,10 +302,10 @@ class Schedule implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

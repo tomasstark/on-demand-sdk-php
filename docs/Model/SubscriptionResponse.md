@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **id** | **string** |  | [optional] 
-**metrics** | [**\Swagger\Client\Model\Metrics**](Metrics.md) |  | [optional] 
+**metrics** | [**\Oda\Client\Model\Metrics**](Metrics.md) |  | [optional] 
 **next_run_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**schedule** | [**\Swagger\Client\Model\Schedule**](Schedule.md) |  | [optional] 
-**screening** | [**\Swagger\Client\Model\ScreeningRequest**](ScreeningRequest.md) |  | [optional] 
+**schedule** | [**\Oda\Client\Model\Schedule**](Schedule.md) |  | [optional] 
+**screening** | [**\Oda\Client\Model\ScreeningRequest**](ScreeningRequest.md) |  | [optional] 
 **status** | **string** |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 

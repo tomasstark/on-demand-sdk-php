@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * IdentityResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -72,7 +72,7 @@ class IdentityResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'candidate_id' => 'string',
         'id' => 'string',
-        'kba' => '\Swagger\Client\Model\KnowledgeBasedAnswer',
+        'kba' => '\Oda\Client\Model\KnowledgeBasedAnswer',
         'status' => 'string',
         'type' => 'string'
     ];
@@ -244,7 +244,7 @@ class IdentityResponse implements ArrayAccess
 
     /**
      * Gets kba
-     * @return \Swagger\Client\Model\KnowledgeBasedAnswer
+     * @return \Oda\Client\Model\KnowledgeBasedAnswer
      */
     public function getKba()
     {
@@ -253,7 +253,7 @@ class IdentityResponse implements ArrayAccess
 
     /**
      * Sets kba
-     * @param \Swagger\Client\Model\KnowledgeBasedAnswer $kba
+     * @param \Oda\Client\Model\KnowledgeBasedAnswer $kba
      * @return $this
      */
     public function setKba($kba)
@@ -356,10 +356,10 @@ class IdentityResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

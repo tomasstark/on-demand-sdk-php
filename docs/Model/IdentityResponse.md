@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **candidate_id** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
-**kba** | [**\Swagger\Client\Model\KnowledgeBasedAnswer**](KnowledgeBasedAnswer.md) |  | [optional] 
+**kba** | [**\Oda\Client\Model\KnowledgeBasedAnswer**](KnowledgeBasedAnswer.md) |  | [optional] 
 **status** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 

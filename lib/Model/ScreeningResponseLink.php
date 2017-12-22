@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \ArrayAccess;
 
@@ -51,7 +51,7 @@ use \ArrayAccess;
  * ScreeningResponseLink Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class ScreeningResponseLink implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'admin' => '\Swagger\Client\Model\ScreeningReport'
+        'admin' => '\Oda\Client\Model\ScreeningReport'
     ];
 
     /**
@@ -178,7 +178,7 @@ class ScreeningResponseLink implements ArrayAccess
 
     /**
      * Gets admin
-     * @return \Swagger\Client\Model\ScreeningReport
+     * @return \Oda\Client\Model\ScreeningReport
      */
     public function getAdmin()
     {
@@ -187,7 +187,7 @@ class ScreeningResponseLink implements ArrayAccess
 
     /**
      * Sets admin
-     * @param \Swagger\Client\Model\ScreeningReport $admin
+     * @param \Oda\Client\Model\ScreeningReport $admin
      * @return $this
      */
     public function setAdmin($admin)
@@ -248,10 +248,10 @@ class ScreeningResponseLink implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Oda\Client\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 
