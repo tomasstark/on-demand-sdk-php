@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * SubscriptionEventsResponseTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description SubscriptionEventsResponse
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -87,6 +87,6 @@ class SubscriptionEventsResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyScreenings()
     {
-        $this->assertEquals("Swagger\Client\Model\SubscriptionScreening", get_class(self::$subject->getScreenings()[0]));
+        $this->assertEquals("Oda\Client\Model\SubscriptionScreening", get_class(self::$subject->getScreenings()[0]));
     }
 }

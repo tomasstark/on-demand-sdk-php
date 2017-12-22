@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * VerificationRequestTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description VerificationRequest
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -85,6 +85,6 @@ class VerificationRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyKba()
     {
-        $this->assertEquals("Swagger\Client\Model\KnowledgeBasedAnswer", get_class(self::$subject->getKba()));
+        $this->assertEquals("Oda\Client\Model\KnowledgeBasedAnswer", get_class(self::$subject->getKba()));
     }
 }

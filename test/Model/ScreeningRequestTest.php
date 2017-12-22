@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * ScreeningRequestTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description ScreeningRequest
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -108,7 +108,7 @@ class ScreeningRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyCallback()
     {
-        $this->assertEquals("Swagger\Client\Model\CallbackRequest", get_class(self::$subject->getCallback()));
+        $this->assertEquals("Oda\Client\Model\CallbackRequest", get_class(self::$subject->getCallback()));
     }
 
     /**
@@ -124,7 +124,7 @@ class ScreeningRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyInvite()
     {
-        $this->assertEquals("Swagger\Client\Model\Invite", get_class(self::$subject->getInvite()));
+        $this->assertEquals("Oda\Client\Model\Invite", get_class(self::$subject->getInvite()));
     }
 
     /**
@@ -140,7 +140,7 @@ class ScreeningRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyReferenceCodes()
     {
-        $this->assertEquals("Swagger\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
+        $this->assertEquals("Oda\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
     }
 
     /**

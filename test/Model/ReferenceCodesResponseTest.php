@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * ReferenceCodesResponseTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description ReferenceCodesResponse
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -88,6 +88,6 @@ class ReferenceCodesResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyReferenceCodes()
     {
-        $this->assertEquals("Swagger\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
+        $this->assertEquals("Oda\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
     }
 }

@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * ScheduleTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description Schedule
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -100,7 +100,7 @@ class ScheduleTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyInterval()
     {
-        $this->assertEquals("Swagger\Client\Model\Interval", get_class(self::$subject->getInterval()));
+        $this->assertEquals("Oda\Client\Model\Interval", get_class(self::$subject->getInterval()));
     }
 
     /**

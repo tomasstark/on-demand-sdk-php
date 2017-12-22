@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * KnowledgeBasedAnswerTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description KnowledgeBasedAnswer
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class KnowledgeBasedAnswerTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyAnswers()
     {
-        $this->assertEquals("Swagger\Client\Model\Answer", get_class(self::$subject->getAnswers()[0]));
+        $this->assertEquals("Oda\Client\Model\Answer", get_class(self::$subject->getAnswers()[0]));
     }
 
     /**
@@ -101,6 +101,6 @@ class KnowledgeBasedAnswerTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyQuestions()
     {
-        $this->assertEquals("Swagger\Client\Model\Question", get_class(self::$subject->getQuestions()[0]));
+        $this->assertEquals("Oda\Client\Model\Question", get_class(self::$subject->getQuestions()[0]));
     }
 }

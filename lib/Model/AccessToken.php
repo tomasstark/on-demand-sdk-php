@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace Swagger\Client\Model;
+namespace Oda\Client\Model;
 
 use \Firebase\JWT\JWT;
 

@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * SubscriptionResponseTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description SubscriptionResponse
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -117,7 +117,7 @@ class SubscriptionResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyMetrics()
     {
-        $this->assertEquals("Swagger\Client\Model\Metrics", get_class(self::$subject->getMetrics()));
+        $this->assertEquals("Oda\Client\Model\Metrics", get_class(self::$subject->getMetrics()));
     }
 
     /**
@@ -133,7 +133,7 @@ class SubscriptionResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertySchedule()
     {
-        $this->assertEquals("Swagger\Client\Model\Schedule", get_class(self::$subject->getSchedule()));
+        $this->assertEquals("Oda\Client\Model\Schedule", get_class(self::$subject->getSchedule()));
     }
 
     /**
@@ -141,7 +141,7 @@ class SubscriptionResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyScreening()
     {
-        $this->assertEquals("Swagger\Client\Model\ScreeningRequest", get_class(self::$subject->getScreening()));
+        $this->assertEquals("Oda\Client\Model\ScreeningRequest", get_class(self::$subject->getScreening()));
     }
 
     /**

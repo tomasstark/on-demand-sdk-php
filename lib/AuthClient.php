@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 class AuthClient {
 
@@ -31,8 +31,8 @@ class AuthClient {
     /**
      * Authorizes
      *
-     * @throws \Swagger\Client\ApiException on error
-     * @return \Swagger\Client\Model\AccessToken;
+     * @throws \Oda\Client\ApiException on error
+     * @return \Oda\Client\Model\AccessToken;
      */
     public function auth() {
 

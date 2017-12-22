@@ -82,7 +82,7 @@ if (empty($credentials)) {
     exit('credentials not set');
 }
 
-$authClient = new Swagger\Client\AuthClient("https://{$env}.kennect.com/oauth/token", $credentials);
+$authClient = new Oda\Client\AuthClient("https://{$env}.kennect.com/oauth/token", $credentials);
 
 try {
     $authResponse = $authClient->auth();
@@ -91,13 +91,13 @@ try {
     exit('Exception when calling AuthClient->auth: '. $e->getMessage(). PHP_EOL);
 }
 
-$configuration = Swagger\Client\Configuration::getDefaultConfiguration();
+$configuration = Oda\Client\Configuration::getDefaultConfiguration();
 $configuration->addDefaultHeader("Authorization", "Bearer " . $authResponse->getAccessToken());
 $configuration->setHost("https://{$env}.kennect.com/v1");
 
 // SET UP API CLIENT
-$apiClient = new Swagger\Client\ApiClient($configuration);
-$apiInstance = new Swagger\Client\Api\DefaultApi($apiClient);
+$apiClient = new Oda\Client\ApiClient($configuration);
+$apiInstance = new Oda\Client\Api\DefaultApi($apiClient);
 
 //TRY AN ENDPOINT
 //GET PACKAGES

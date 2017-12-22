@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * ScreeningResponseTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description ScreeningResponse
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -125,7 +125,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyAdverseActions()
     {
-        $this->assertEquals("Swagger\Client\Model\AdverseActionResponse", get_class(self::$subject->getAdverseActions()[0]));
+        $this->assertEquals("Oda\Client\Model\AdverseActionResponse", get_class(self::$subject->getAdverseActions()[0]));
     }
 
     /**
@@ -141,7 +141,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyCallback()
     {
-        $this->assertEquals("Swagger\Client\Model\CallbackResponse", get_class(self::$subject->getCallback()));
+        $this->assertEquals("Oda\Client\Model\CallbackResponse", get_class(self::$subject->getCallback()));
     }
 
     /**
@@ -165,7 +165,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyDispute()
     {
-        $this->assertEquals("Swagger\Client\Model\Dispute", get_class(self::$subject->getDispute()));
+        $this->assertEquals("Oda\Client\Model\Dispute", get_class(self::$subject->getDispute()));
     }
 
     /**
@@ -181,7 +181,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyInvite()
     {
-        $this->assertEquals("Swagger\Client\Model\Invite", get_class(self::$subject->getInvite()));
+        $this->assertEquals("Oda\Client\Model\Invite", get_class(self::$subject->getInvite()));
     }
 
     /**
@@ -189,7 +189,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyLinks()
     {
-        $this->assertEquals("Swagger\Client\Model\ScreeningResponseLink", get_class(self::$subject->getLinks()));
+        $this->assertEquals("Oda\Client\Model\ScreeningResponseLink", get_class(self::$subject->getLinks()));
     }
 
     /**
@@ -205,7 +205,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyReferenceCodes()
     {
-        $this->assertEquals("Swagger\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
+        $this->assertEquals("Oda\Client\Model\ReferenceCode", get_class(self::$subject->getReferenceCodes()[0]));
     }
 
     /**
@@ -213,7 +213,7 @@ class ScreeningResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyReportItems()
     {
-        $this->assertEquals("Swagger\Client\Model\ScreeningResponseReportItem", get_class(self::$subject->getReportItems()[0]));
+        $this->assertEquals("Oda\Client\Model\ScreeningResponseReportItem", get_class(self::$subject->getReportItems()[0]));
     }
 
     /**

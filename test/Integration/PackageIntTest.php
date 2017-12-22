@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 require_once __DIR__ . "/../Integration/BaseIntegrationTest.php";
 

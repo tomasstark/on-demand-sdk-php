@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 class AccessTokenTest extends \PHPUnit_Framework_TestCase
 {

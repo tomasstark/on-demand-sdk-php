@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * InviteResponseTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description InviteResponse
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -87,6 +87,6 @@ class InviteResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyInvite()
     {
-        $this->assertEquals("Swagger\Client\Model\Invite", get_class(self::$subject->getInvite()));
+        $this->assertEquals("Oda\Client\Model\Invite", get_class(self::$subject->getInvite()));
     }
 }

@@ -35,7 +35,7 @@ if (empty($credentials)) {
     exit('credentials not set'. PHP_EOL);
 }
 
-$authClient = new Swagger\Client\AuthClient("https://{$env}.kennect.com/oauth/token", $credentials);
+$authClient = new Oda\Client\AuthClient("https://{$env}.kennect.com/oauth/token", $credentials);
 
 try {
     $authResponse = $authClient->auth();
@@ -44,15 +44,15 @@ try {
     exit('Exception when calling AuthClient->auth: '. $e->getMessage(). PHP_EOL);
 }
 
-$configuration = Swagger\Client\Configuration::getDefaultConfiguration();
+$configuration = Oda\Client\Configuration::getDefaultConfiguration();
 $configuration->addDefaultHeader("Authorization", "Bearer " . $authResponse->getAccessToken());
 $configuration->setHost("https://{$env}.kennect.com/v1");
 
 ////
 // SET UP API CLIENT
 ////
-$apiClient = new Swagger\Client\ApiClient($configuration);
-$apiInstance = new Swagger\Client\Api\DefaultApi($apiClient);
+$apiClient = new Oda\Client\ApiClient($configuration);
+$apiInstance = new Oda\Client\Api\DefaultApi($apiClient);
 
 ////
 //CREATE CANDIDATE
@@ -64,7 +64,7 @@ $candidateAddressData = array(
     'postal_code' => '30318',
     'region_code' => 'US-GA'
 );
-$candidateAddress = new \Swagger\Client\Model\Address($candidateAddressData);
+$candidateAddress = new \Oda\Client\Model\Address($candidateAddressData);
 
 $candidateAliasData = array(
     'confirmed_no_middle_name' => false,
@@ -72,14 +72,14 @@ $candidateAliasData = array(
     'given_name' => 'GivenAlias1',
     'middle_name' => 'MiddleNameAlias1'
 );
-$candidateAlias = new Swagger\Client\Model\CandidateAlias($candidateAliasData);
+$candidateAlias = new Oda\Client\Model\CandidateAlias($candidateAliasData);
 
 $driversLicenseData = array(
     'license_number' => 'A1234567',
     'issuing_agency' => 'CA',
     'type' => 'personal'
 );
-$driversLicense = new Swagger\Client\Model\DriversLicense($driversLicenseData);
+$driversLicense = new Oda\Client\Model\DriversLicense($driversLicenseData);
 
 $candidateData = array(
     'address' => $candidateAddress,
@@ -95,7 +95,7 @@ $candidateData = array(
     'ssn' => '691221234' //This SSN is fake
 );
 
-$candidateRequest = new Swagger\Client\Model\CandidateRequest($candidateData);
+$candidateRequest = new Oda\Client\Model\CandidateRequest($candidateData);
 
 try {
     $candidateResponse = $apiInstance->candidatesPost($candidateRequest);
@@ -143,14 +143,14 @@ $callbackRequestData = array(
     //WARNING: This URL is for demonstration only, it is visible to the public. It should only be used with mock information.
     'uri' => 'https://requestb.in/v9nhx1v9'
 );
-$callbackRequest = new Swagger\Client\Model\CallbackRequest($callbackRequestData);
+$callbackRequest = new Oda\Client\Model\CallbackRequest($callbackRequestData);
 
 $screeningRequestData = array(
     'candidate_id' =>  $candidateResponse->getId(),
     'package_id' =>  $ssnTracePackageId,
     'callback' => $callbackRequest
 );
-$screeningRequest =  new Swagger\Client\Model\ScreeningRequest($screeningRequestData);
+$screeningRequest =  new Oda\Client\Model\ScreeningRequest($screeningRequestData);
 
 try {
     $screeningResponse = $apiInstance->screeningsPost($screeningRequest);

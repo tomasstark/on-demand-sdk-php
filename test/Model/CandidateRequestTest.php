@@ -21,7 +21,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Oda\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Oda\Client;
 
 /**
  * CandidateRequestTest Class Doc Comment
@@ -51,7 +51,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description CandidateRequest
 /**
- * @package     Swagger\Client
+ * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -110,7 +110,7 @@ class CandidateRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyAddress()
     {
-        $this->assertEquals("Swagger\Client\Model\Address", get_class(self::$subject->getAddress()));
+        $this->assertEquals("Oda\Client\Model\Address", get_class(self::$subject->getAddress()));
     }
 
     /**
@@ -118,7 +118,7 @@ class CandidateRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyAliases()
     {
-        $this->assertEquals("Swagger\Client\Model\CandidateAlias", get_class(self::$subject->getAliases()[0]));
+        $this->assertEquals("Oda\Client\Model\CandidateAlias", get_class(self::$subject->getAliases()[0]));
     }
 
     /**
@@ -150,7 +150,7 @@ class CandidateRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testPropertyDriversLicense()
     {
-        $this->assertEquals("Swagger\Client\Model\DriversLicense", get_class(self::$subject->getDriversLicense()));
+        $this->assertEquals("Oda\Client\Model\DriversLicense", get_class(self::$subject->getDriversLicense()));
     }
 
     /**
