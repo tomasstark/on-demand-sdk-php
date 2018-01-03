@@ -17,7 +17,7 @@
 
 
 /**
- * MetricsTest
+ * CandidatePortalLinkResponseTest
  *
  * PHP version 5
  *
@@ -47,16 +47,16 @@
 namespace Oda\Client;
 
 /**
- * MetricsTest Class Doc Comment
+ * CandidatePortalLinkResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description Metrics
+// * @description CandidatePortalLinkResponse
 /**
  * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MetricsTest extends \PHPUnit_Framework_TestCase
+class CandidatePortalLinkResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,23 +88,16 @@ class MetricsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Metrics"
+     * Test "CandidatePortalLinkResponse"
      */
-    public function testMetrics()
+    public function testCandidatePortalLinkResponse()
     {
     }
 
     /**
-     * Test attribute "failure_count"
+     * Test attribute "candidate_portal"
      */
-    public function testPropertyFailureCount()
-    {
-    }
-
-    /**
-     * Test attribute "run_count"
-     */
-    public function testPropertyRunCount()
+    public function testPropertyCandidatePortal()
     {
     }
 }

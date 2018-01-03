@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | 
 [**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | 
 [**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | 
+[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | 
 [**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | 
 [**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | 
 [**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | 
@@ -20,7 +21,6 @@ Method | HTTP request | Description
 [**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | 
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | 
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | 
-[**screeningsGet**](DefaultApi.md#screeningsGet) | **GET** /screenings | 
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | 
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | 
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | 
@@ -250,6 +250,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **candidatesIdLinksPost**
+> \Oda\Client\Model\CandidatePortalLinkResponse candidatesIdLinksPost($id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$id = "id_example"; // string | 
+
+try {
+    $result = $api_instance->candidatesIdLinksPost($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->candidatesIdLinksPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+
+### Return type
+
+[**\Oda\Client\Model\CandidatePortalLinkResponse**](../Model/CandidatePortalLinkResponse.md)
 
 ### Authorization
 
@@ -727,45 +770,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Oda\Client\Model\ReferenceCodesResponse**](../Model/ReferenceCodesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **screeningsGet**
-> \Oda\Client\Model\ScreeningSummaryResponse[] screeningsGet()
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Oda\Client\Api\DefaultApi();
-
-try {
-    $result = $api_instance->screeningsGet();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->screeningsGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Oda\Client\Model\ScreeningSummaryResponse[]**](../Model/ScreeningSummaryResponse.md)
 
 ### Authorization
 

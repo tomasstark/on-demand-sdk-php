@@ -16,7 +16,7 @@
  */
 
 /**
- * ScreeningReport
+ * CandidatePortalLinkResponse
  *
  * PHP version 5
  *
@@ -48,14 +48,14 @@ namespace Oda\Client\Model;
 use \ArrayAccess;
 
 /**
- * ScreeningReport Class Doc Comment
+ * CandidatePortalLinkResponse Class Doc Comment
  *
  * @category    Class
  * @package     Oda\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ScreeningReport implements ArrayAccess
+class CandidatePortalLinkResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -63,15 +63,14 @@ class ScreeningReport implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ScreeningReport';
+    protected static $swaggerModelName = 'CandidatePortalLinkResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pdf' => 'string',
-        'web' => 'string'
+        'candidate_portal' => 'string'
     ];
 
     /**
@@ -79,8 +78,7 @@ class ScreeningReport implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'pdf' => null,
-        'web' => null
+        'candidate_portal' => null
     ];
 
     public static function swaggerTypes()
@@ -98,8 +96,7 @@ class ScreeningReport implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pdf' => 'pdf',
-        'web' => 'web'
+        'candidate_portal' => 'candidatePortal'
     ];
 
 
@@ -108,8 +105,7 @@ class ScreeningReport implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pdf' => 'setPdf',
-        'web' => 'setWeb'
+        'candidate_portal' => 'setCandidatePortal'
     ];
 
 
@@ -118,8 +114,7 @@ class ScreeningReport implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pdf' => 'getPdf',
-        'web' => 'getWeb'
+        'candidate_portal' => 'getCandidatePortal'
     ];
 
     public static function attributeMap()
@@ -153,8 +148,7 @@ class ScreeningReport implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pdf'] = isset($data['pdf']) ? $data['pdf'] : null;
-        $this->container['web'] = isset($data['web']) ? $data['web'] : null;
+        $this->container['candidate_portal'] = isset($data['candidate_portal']) ? $data['candidate_portal'] : null;
     }
 
     /**
@@ -183,43 +177,22 @@ class ScreeningReport implements ArrayAccess
 
 
     /**
-     * Gets pdf
+     * Gets candidate_portal
      * @return string
      */
-    public function getPdf()
+    public function getCandidatePortal()
     {
-        return $this->container['pdf'];
+        return $this->container['candidate_portal'];
     }
 
     /**
-     * Sets pdf
-     * @param string $pdf
+     * Sets candidate_portal
+     * @param string $candidate_portal
      * @return $this
      */
-    public function setPdf($pdf)
+    public function setCandidatePortal($candidate_portal)
     {
-        $this->container['pdf'] = $pdf;
-
-        return $this;
-    }
-
-    /**
-     * Gets web
-     * @return string
-     */
-    public function getWeb()
-    {
-        return $this->container['web'];
-    }
-
-    /**
-     * Sets web
-     * @param string $web
-     * @return $this
-     */
-    public function setWeb($web)
-    {
-        $this->container['web'] = $web;
+        $this->container['candidate_portal'] = $candidate_portal;
 
         return $this;
     }

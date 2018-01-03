@@ -2,7 +2,7 @@
 This SDK allows you to call the Sterling Talent Solutions On-Demand API.
 
 
-- API version: 2017-12-08T12:41:25.475-08:00
+- API version: 2018-01-03T11:31:31.343-08:00
 - Build package: io.swagger.codegen.languages.PhpClientCodegen
 
 ## Requirements
@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**candidatesIdDocumentsGet**](docs/Api/DefaultApi.md#candidatesiddocumentsget) | **GET** /candidates/{id}/documents | 
 *DefaultApi* | [**candidatesIdDocumentsPost**](docs/Api/DefaultApi.md#candidatesiddocumentspost) | **POST** /candidates/{id}/documents | 
 *DefaultApi* | [**candidatesIdGet**](docs/Api/DefaultApi.md#candidatesidget) | **GET** /candidates/{id} | 
+*DefaultApi* | [**candidatesIdLinksPost**](docs/Api/DefaultApi.md#candidatesidlinkspost) | **POST** /candidates/{id}/links | 
 *DefaultApi* | [**candidatesIdPut**](docs/Api/DefaultApi.md#candidatesidput) | **PUT** /candidates/{id} | 
 *DefaultApi* | [**candidatesIdTrustPost**](docs/Api/DefaultApi.md#candidatesidtrustpost) | **POST** /candidates/{id}/trust | 
 *DefaultApi* | [**candidatesPost**](docs/Api/DefaultApi.md#candidatespost) | **POST** /candidates | 
@@ -140,7 +141,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**packagesGet**](docs/Api/DefaultApi.md#packagesget) | **GET** /packages | 
 *DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | 
 *DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | 
-*DefaultApi* | [**screeningsGet**](docs/Api/DefaultApi.md#screeningsget) | **GET** /screenings | 
 *DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | 
 *DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | 
 *DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | 
@@ -170,6 +170,7 @@ Class | Method | HTTP request | Description
  - [CallbackResponse](docs/Model/CallbackResponse.md)
  - [CandidateAlias](docs/Model/CandidateAlias.md)
  - [CandidateDocumentResponse](docs/Model/CandidateDocumentResponse.md)
+ - [CandidatePortalLinkResponse](docs/Model/CandidatePortalLinkResponse.md)
  - [CandidateRequest](docs/Model/CandidateRequest.md)
  - [CandidateResponse](docs/Model/CandidateResponse.md)
  - [Dispute](docs/Model/Dispute.md)
@@ -196,7 +197,6 @@ Class | Method | HTTP request | Description
  - [ScreeningResponse](docs/Model/ScreeningResponse.md)
  - [ScreeningResponseLink](docs/Model/ScreeningResponseLink.md)
  - [ScreeningResponseReportItem](docs/Model/ScreeningResponseReportItem.md)
- - [ScreeningSummaryResponse](docs/Model/ScreeningSummaryResponse.md)
  - [SubscriptionEventsResponse](docs/Model/SubscriptionEventsResponse.md)
  - [SubscriptionRequest](docs/Model/SubscriptionRequest.md)
  - [SubscriptionResponse](docs/Model/SubscriptionResponse.md)
