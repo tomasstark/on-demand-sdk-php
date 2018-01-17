@@ -48,7 +48,6 @@ class AccessToken {
     public function isExpired() {
         $timeProvider = $this->timeProvider;
         $currentTime = $timeProvider();
-        echo "{$currentTime} > {$this->getExpirationTime()}\n";
         return $currentTime <= $this->getExpirationTime();
     }
 

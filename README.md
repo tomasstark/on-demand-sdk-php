@@ -1,8 +1,8 @@
-# SwaggerClient-php
-This SDK allows you to call the Sterling Talent Solutions On-Demand API.
+# Sterling On Demand API SDK for PHP
 
+This SDK allows you to call the Sterling Talent Solutions On Demand API.
 
-- API version: 2018-01-03T11:31:31.343-08:00
+- API version: 2018-01-17T10:44:23.086-08:00
 - Build package: io.swagger.codegen.languages.PhpClientCodegen
 
 ## Requirements
@@ -125,30 +125,30 @@ All URIs are relative to *https://api-int.kennect.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**billingCodesGet**](docs/Api/DefaultApi.md#billingcodesget) | **GET** /billing-codes | 
-*DefaultApi* | [**candidatesGet**](docs/Api/DefaultApi.md#candidatesget) | **GET** /candidates | 
-*DefaultApi* | [**candidatesIdDocumentsGet**](docs/Api/DefaultApi.md#candidatesiddocumentsget) | **GET** /candidates/{id}/documents | 
-*DefaultApi* | [**candidatesIdDocumentsPost**](docs/Api/DefaultApi.md#candidatesiddocumentspost) | **POST** /candidates/{id}/documents | 
-*DefaultApi* | [**candidatesIdGet**](docs/Api/DefaultApi.md#candidatesidget) | **GET** /candidates/{id} | 
-*DefaultApi* | [**candidatesIdLinksPost**](docs/Api/DefaultApi.md#candidatesidlinkspost) | **POST** /candidates/{id}/links | 
-*DefaultApi* | [**candidatesIdPut**](docs/Api/DefaultApi.md#candidatesidput) | **PUT** /candidates/{id} | 
-*DefaultApi* | [**candidatesIdTrustPost**](docs/Api/DefaultApi.md#candidatesidtrustpost) | **POST** /candidates/{id}/trust | 
-*DefaultApi* | [**candidatesPost**](docs/Api/DefaultApi.md#candidatespost) | **POST** /candidates | 
+*DefaultApi* | [**candidatesGet**](docs/Api/DefaultApi.md#candidatesget) | **GET** /candidates | Get a list of Candidates
+*DefaultApi* | [**candidatesIdDocumentsGet**](docs/Api/DefaultApi.md#candidatesiddocumentsget) | **GET** /candidates/{id}/documents | List documents attached to a candidate
+*DefaultApi* | [**candidatesIdDocumentsPost**](docs/Api/DefaultApi.md#candidatesiddocumentspost) | **POST** /candidates/{id}/documents | Attach a document to a candidate
+*DefaultApi* | [**candidatesIdGet**](docs/Api/DefaultApi.md#candidatesidget) | **GET** /candidates/{id} | Get a specific Candidate
+*DefaultApi* | [**candidatesIdLinksPost**](docs/Api/DefaultApi.md#candidatesidlinkspost) | **POST** /candidates/{id}/links | Get links to the Candidate portal for use by the Candidate
+*DefaultApi* | [**candidatesIdPut**](docs/Api/DefaultApi.md#candidatesidput) | **PUT** /candidates/{id} | Update a candidate
+*DefaultApi* | [**candidatesIdTrustPost**](docs/Api/DefaultApi.md#candidatesidtrustpost) | **POST** /candidates/{id}/trust | Trust a candidate
+*DefaultApi* | [**candidatesPost**](docs/Api/DefaultApi.md#candidatespost) | **POST** /candidates | Create a candidate
 *DefaultApi* | [**healthGet**](docs/Api/DefaultApi.md#healthget) | **GET** /health | 
 *DefaultApi* | [**identitiesIdGet**](docs/Api/DefaultApi.md#identitiesidget) | **GET** /identities/{id} | 
 *DefaultApi* | [**identitiesIdRetryPost**](docs/Api/DefaultApi.md#identitiesidretrypost) | **POST** /identities/{id}/retry | 
 *DefaultApi* | [**identitiesIdVerificationPut**](docs/Api/DefaultApi.md#identitiesidverificationput) | **PUT** /identities/{id}/verification | 
 *DefaultApi* | [**identitiesPost**](docs/Api/DefaultApi.md#identitiespost) | **POST** /identities | 
-*DefaultApi* | [**packagesGet**](docs/Api/DefaultApi.md#packagesget) | **GET** /packages | 
-*DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | 
+*DefaultApi* | [**packagesGet**](docs/Api/DefaultApi.md#packagesget) | **GET** /packages | Get a list of Packages
+*DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | Get the estimated price of a Package
 *DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | 
-*DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | 
-*DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | 
-*DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | 
-*DefaultApi* | [**screeningsIdInvitePost**](docs/Api/DefaultApi.md#screeningsidinvitepost) | **POST** /screenings/{id}/invite | 
-*DefaultApi* | [**screeningsIdReportGet**](docs/Api/DefaultApi.md#screeningsidreportget) | **GET** /screenings/{id}/report | 
-*DefaultApi* | [**screeningsIdReportLinksPost**](docs/Api/DefaultApi.md#screeningsidreportlinkspost) | **POST** /screenings/{id}/report-links | 
-*DefaultApi* | [**screeningsIdReportPdfGet**](docs/Api/DefaultApi.md#screeningsidreportpdfget) | **GET** /screenings/{id}/report.pdf | 
-*DefaultApi* | [**screeningsPost**](docs/Api/DefaultApi.md#screeningspost) | **POST** /screenings | 
+*DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+*DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
+*DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | Get a specific screening
+*DefaultApi* | [**screeningsIdInvitePost**](docs/Api/DefaultApi.md#screeningsidinvitepost) | **POST** /screenings/{id}/invite | Create an invite
+*DefaultApi* | [**screeningsIdReportGet**](docs/Api/DefaultApi.md#screeningsidreportget) | **GET** /screenings/{id}/report | Get a Screening report in PDF form
+*DefaultApi* | [**screeningsIdReportLinksPost**](docs/Api/DefaultApi.md#screeningsidreportlinkspost) | **POST** /screenings/{id}/report-links | Create  a one-time use report link
+*DefaultApi* | [**screeningsIdReportPdfGet**](docs/Api/DefaultApi.md#screeningsidreportpdfget) | **GET** /screenings/{id}/report.pdf | Get a Screening report in PDF form
+*DefaultApi* | [**screeningsPost**](docs/Api/DefaultApi.md#screeningspost) | **POST** /screenings | Create a Screening
 *DefaultApi* | [**subscriptionsIdDelete**](docs/Api/DefaultApi.md#subscriptionsiddelete) | **DELETE** /subscriptions/{id} | 
 *DefaultApi* | [**subscriptionsIdEventsGet**](docs/Api/DefaultApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | 
 *DefaultApi* | [**subscriptionsIdGet**](docs/Api/DefaultApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | 

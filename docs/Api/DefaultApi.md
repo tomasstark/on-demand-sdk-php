@@ -5,30 +5,30 @@ All URIs are relative to *https://api-int.kennect.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**billingCodesGet**](DefaultApi.md#billingCodesGet) | **GET** /billing-codes | 
-[**candidatesGet**](DefaultApi.md#candidatesGet) | **GET** /candidates | 
-[**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | 
-[**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | 
-[**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | 
-[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | 
-[**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | 
-[**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | 
-[**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | 
+[**candidatesGet**](DefaultApi.md#candidatesGet) | **GET** /candidates | Get a list of Candidates
+[**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | List documents attached to a candidate
+[**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | Attach a document to a candidate
+[**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | Get a specific Candidate
+[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | Get links to the Candidate portal for use by the Candidate
+[**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | Update a candidate
+[**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | Trust a candidate
+[**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | Create a candidate
 [**healthGet**](DefaultApi.md#healthGet) | **GET** /health | 
 [**identitiesIdGet**](DefaultApi.md#identitiesIdGet) | **GET** /identities/{id} | 
 [**identitiesIdRetryPost**](DefaultApi.md#identitiesIdRetryPost) | **POST** /identities/{id}/retry | 
 [**identitiesIdVerificationPut**](DefaultApi.md#identitiesIdVerificationPut) | **PUT** /identities/{id}/verification | 
 [**identitiesPost**](DefaultApi.md#identitiesPost) | **POST** /identities | 
-[**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | 
-[**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | 
+[**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | Get a list of Packages
+[**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | 
-[**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | 
-[**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | 
-[**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | 
-[**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | 
-[**screeningsIdReportGet**](DefaultApi.md#screeningsIdReportGet) | **GET** /screenings/{id}/report | 
-[**screeningsIdReportLinksPost**](DefaultApi.md#screeningsIdReportLinksPost) | **POST** /screenings/{id}/report-links | 
-[**screeningsIdReportPdfGet**](DefaultApi.md#screeningsIdReportPdfGet) | **GET** /screenings/{id}/report.pdf | 
-[**screeningsPost**](DefaultApi.md#screeningsPost) | **POST** /screenings | 
+[**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+[**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
+[**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
+[**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | Create an invite
+[**screeningsIdReportGet**](DefaultApi.md#screeningsIdReportGet) | **GET** /screenings/{id}/report | Get a Screening report in PDF form
+[**screeningsIdReportLinksPost**](DefaultApi.md#screeningsIdReportLinksPost) | **POST** /screenings/{id}/report-links | Create  a one-time use report link
+[**screeningsIdReportPdfGet**](DefaultApi.md#screeningsIdReportPdfGet) | **GET** /screenings/{id}/report.pdf | Get a Screening report in PDF form
+[**screeningsPost**](DefaultApi.md#screeningsPost) | **POST** /screenings | Create a Screening
 [**subscriptionsIdDelete**](DefaultApi.md#subscriptionsIdDelete) | **DELETE** /subscriptions/{id} | 
 [**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | 
 [**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | 
@@ -40,6 +40,8 @@ Method | HTTP request | Description
 
 # **billingCodesGet**
 > \Oda\Client\Model\BillingCodesResponse billingCodesGet()
+
+
 
 
 
@@ -80,7 +82,9 @@ No authorization required
 # **candidatesGet**
 > \Oda\Client\Model\CandidateResponse candidatesGet($limit, $offset, $given_name, $family_name, $client_reference_id, $email)
 
+Get a list of Candidates
 
+Get a list of Candidates
 
 ### Example
 ```php
@@ -133,7 +137,9 @@ No authorization required
 # **candidatesIdDocumentsGet**
 > \Oda\Client\Model\CandidateDocumentResponse[] candidatesIdDocumentsGet($id)
 
+List documents attached to a candidate
 
+List documents attached to a candidate
 
 ### Example
 ```php
@@ -176,7 +182,9 @@ No authorization required
 # **candidatesIdDocumentsPost**
 > candidatesIdDocumentsPost($id, $accept, $file_name)
 
+Attach a document to a candidate
 
+Attach a document to a candidate
 
 ### Example
 ```php
@@ -222,7 +230,9 @@ No authorization required
 # **candidatesIdGet**
 > \Oda\Client\Model\CandidateResponse candidatesIdGet($id)
 
+Get a specific Candidate
 
+Get a specific Candidate
 
 ### Example
 ```php
@@ -265,7 +275,9 @@ No authorization required
 # **candidatesIdLinksPost**
 > \Oda\Client\Model\CandidatePortalLinkResponse candidatesIdLinksPost($id)
 
+Get links to the Candidate portal for use by the Candidate
 
+Get links to the Candidate portal for use by the Candidate
 
 ### Example
 ```php
@@ -308,7 +320,9 @@ No authorization required
 # **candidatesIdPut**
 > \Oda\Client\Model\CandidateResponse candidatesIdPut($id, $candidate_request)
 
+Update a candidate
 
+Update a candidate
 
 ### Example
 ```php
@@ -353,7 +367,9 @@ No authorization required
 # **candidatesIdTrustPost**
 > \Oda\Client\Model\TrustedUserResponse candidatesIdTrustPost($id, $trusted_user_request)
 
+Trust a candidate
 
+Trust a candidate
 
 ### Example
 ```php
@@ -398,7 +414,9 @@ No authorization required
 # **candidatesPost**
 > \Oda\Client\Model\CandidateResponse candidatesPost($candidate_request)
 
+Create a candidate
 
+Create a candidate
 
 ### Example
 ```php
@@ -440,6 +458,8 @@ No authorization required
 
 # **healthGet**
 > \Oda\Client\Model\HealthResponse healthGet($deep)
+
+
 
 
 
@@ -486,6 +506,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -529,6 +551,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -569,6 +593,8 @@ No authorization required
 
 # **identitiesIdVerificationPut**
 > \Oda\Client\Model\IdentityResponse identitiesIdVerificationPut($id, $verification_request)
+
+
 
 
 
@@ -617,6 +643,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -658,7 +686,9 @@ No authorization required
 # **packagesGet**
 > \Oda\Client\Model\PackageResponse[] packagesGet($all)
 
+Get a list of Packages
 
+Get a list of Packages
 
 ### Example
 ```php
@@ -701,7 +731,9 @@ No authorization required
 # **packagesIdPriceGet**
 > \Oda\Client\Model\PackagePriceResponse packagesIdPriceGet($id, $candidate_id)
 
+Get the estimated price of a Package
 
+Get the estimated price of a Package
 
 ### Example
 ```php
@@ -748,6 +780,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -785,7 +819,9 @@ No authorization required
 # **screeningsIdAdverseActionsPost**
 > screeningsIdAdverseActionsPost($id, $adverse_action_request)
 
+Create an adverse action on a Screening
 
+Create an adverse action on a Screening
 
 ### Example
 ```php
@@ -829,7 +865,9 @@ No authorization required
 # **screeningsIdDocumentsPost**
 > screeningsIdDocumentsPost($id, $accept, $document_type, $party)
 
+Attach a document to a Screening
 
+Attach a document to a Screening
 
 ### Example
 ```php
@@ -877,7 +915,9 @@ No authorization required
 # **screeningsIdGet**
 > \Oda\Client\Model\ScreeningResponse screeningsIdGet($id)
 
+Get a specific screening
 
+Get a specific screening
 
 ### Example
 ```php
@@ -920,7 +960,9 @@ No authorization required
 # **screeningsIdInvitePost**
 > \Oda\Client\Model\InviteResponse screeningsIdInvitePost($id)
 
+Create an invite
 
+Create an invite
 
 ### Example
 ```php
@@ -963,7 +1005,9 @@ No authorization required
 # **screeningsIdReportGet**
 > map[string,string] screeningsIdReportGet($id, $accept)
 
+Get a Screening report in PDF form
 
+Get a Screening report in PDF form
 
 ### Example
 ```php
@@ -1008,7 +1052,9 @@ No authorization required
 # **screeningsIdReportLinksPost**
 > \Oda\Client\Model\OneTimeReportLinkResponse screeningsIdReportLinksPost($id)
 
+Create  a one-time use report link
 
+Create  a one-time use report link
 
 ### Example
 ```php
@@ -1051,7 +1097,9 @@ No authorization required
 # **screeningsIdReportPdfGet**
 > map[string,string] screeningsIdReportPdfGet($id, $token)
 
+Get a Screening report in PDF form
 
+Get a Screening report in PDF form
 
 ### Example
 ```php
@@ -1096,7 +1144,9 @@ No authorization required
 # **screeningsPost**
 > \Oda\Client\Model\ScreeningResponse screeningsPost($screening_request, $idempotency_key)
 
+Create a Screening
 
+Create a Screening
 
 ### Example
 ```php
@@ -1143,6 +1193,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -1183,6 +1235,8 @@ No authorization required
 
 # **subscriptionsIdEventsGet**
 > \Oda\Client\Model\SubscriptionEventsResponse subscriptionsIdEventsGet($id)
+
+
 
 
 
@@ -1229,6 +1283,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -1269,6 +1325,8 @@ No authorization required
 
 # **subscriptionsPost**
 > \Oda\Client\Model\SubscriptionResponse subscriptionsPost($subscription_request)
+
+
 
 
 
@@ -1315,6 +1373,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -1358,6 +1418,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```php
 <?php
@@ -1398,6 +1460,8 @@ No authorization required
 
 # **trustsIdDelete**
 > trustsIdDelete($id)
+
+
 
 
 
