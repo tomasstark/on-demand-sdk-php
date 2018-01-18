@@ -121,7 +121,7 @@ All URIs are relative to *https://api-int.kennect.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**billingCodesGet**](docs/Api/DefaultApi.md#billingcodesget) | **GET** /billing-codes | 
+*DefaultApi* | [**billingCodesGet**](docs/Api/DefaultApi.md#billingcodesget) | **GET** /billing-codes | Get a list of valid billing codes
 *DefaultApi* | [**candidatesGet**](docs/Api/DefaultApi.md#candidatesget) | **GET** /candidates | Get a list of Candidates
 *DefaultApi* | [**candidatesIdDocumentsGet**](docs/Api/DefaultApi.md#candidatesiddocumentsget) | **GET** /candidates/{id}/documents | List documents attached to a candidate
 *DefaultApi* | [**candidatesIdDocumentsPost**](docs/Api/DefaultApi.md#candidatesiddocumentspost) | **POST** /candidates/{id}/documents | Attach a document to a candidate
@@ -130,14 +130,14 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**candidatesIdPut**](docs/Api/DefaultApi.md#candidatesidput) | **PUT** /candidates/{id} | Update a candidate
 *DefaultApi* | [**candidatesIdTrustPost**](docs/Api/DefaultApi.md#candidatesidtrustpost) | **POST** /candidates/{id}/trust | Trust a candidate
 *DefaultApi* | [**candidatesPost**](docs/Api/DefaultApi.md#candidatespost) | **POST** /candidates | Create a candidate
-*DefaultApi* | [**healthGet**](docs/Api/DefaultApi.md#healthget) | **GET** /health | 
-*DefaultApi* | [**identitiesIdGet**](docs/Api/DefaultApi.md#identitiesidget) | **GET** /identities/{id} | 
-*DefaultApi* | [**identitiesIdRetryPost**](docs/Api/DefaultApi.md#identitiesidretrypost) | **POST** /identities/{id}/retry | 
-*DefaultApi* | [**identitiesIdVerificationPut**](docs/Api/DefaultApi.md#identitiesidverificationput) | **PUT** /identities/{id}/verification | 
-*DefaultApi* | [**identitiesPost**](docs/Api/DefaultApi.md#identitiespost) | **POST** /identities | 
+*DefaultApi* | [**healthGet**](docs/Api/DefaultApi.md#healthget) | **GET** /health | Check the health of the API
+*DefaultApi* | [**identitiesIdGet**](docs/Api/DefaultApi.md#identitiesidget) | **GET** /identities/{id} | Get a verified identity
+*DefaultApi* | [**identitiesIdRetryPost**](docs/Api/DefaultApi.md#identitiesidretrypost) | **POST** /identities/{id}/retry | Retry creating an identity and get a new set of questions
+*DefaultApi* | [**identitiesIdVerificationPut**](docs/Api/DefaultApi.md#identitiesidverificationput) | **PUT** /identities/{id}/verification | Verify an identity by providing correct answers
+*DefaultApi* | [**identitiesPost**](docs/Api/DefaultApi.md#identitiespost) | **POST** /identities | Get a list of questions needing to be answered before an identity can be created
 *DefaultApi* | [**packagesGet**](docs/Api/DefaultApi.md#packagesget) | **GET** /packages | Get a list of Packages
 *DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | Get the estimated price of a Package
-*DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | 
+*DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | Return a list of valid Reference Codes
 *DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
 *DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 *DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | Get a specific screening
@@ -146,13 +146,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**screeningsIdReportLinksPost**](docs/Api/DefaultApi.md#screeningsidreportlinkspost) | **POST** /screenings/{id}/report-links | Create  a one-time use report link
 *DefaultApi* | [**screeningsIdReportPdfGet**](docs/Api/DefaultApi.md#screeningsidreportpdfget) | **GET** /screenings/{id}/report.pdf | Get a Screening report in PDF form
 *DefaultApi* | [**screeningsPost**](docs/Api/DefaultApi.md#screeningspost) | **POST** /screenings | Create a Screening
-*DefaultApi* | [**subscriptionsIdDelete**](docs/Api/DefaultApi.md#subscriptionsiddelete) | **DELETE** /subscriptions/{id} | 
-*DefaultApi* | [**subscriptionsIdEventsGet**](docs/Api/DefaultApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | 
-*DefaultApi* | [**subscriptionsIdGet**](docs/Api/DefaultApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | 
-*DefaultApi* | [**subscriptionsPost**](docs/Api/DefaultApi.md#subscriptionspost) | **POST** /subscriptions | 
-*DefaultApi* | [**trustedUsersIdGet**](docs/Api/DefaultApi.md#trustedusersidget) | **GET** /trusted-users/{id} | 
-*DefaultApi* | [**trustedUsersPost**](docs/Api/DefaultApi.md#trusteduserspost) | **POST** /trusted-users | 
-*DefaultApi* | [**trustsIdDelete**](docs/Api/DefaultApi.md#trustsiddelete) | **DELETE** /trusts/{id} | 
+*DefaultApi* | [**subscriptionsIdDelete**](docs/Api/DefaultApi.md#subscriptionsiddelete) | **DELETE** /subscriptions/{id} | Delete a subscription
+*DefaultApi* | [**subscriptionsIdEventsGet**](docs/Api/DefaultApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | Get a list of events related to a given subscription
+*DefaultApi* | [**subscriptionsIdGet**](docs/Api/DefaultApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | Get a subscription
+*DefaultApi* | [**subscriptionsPost**](docs/Api/DefaultApi.md#subscriptionspost) | **POST** /subscriptions | Create a subscription
+*DefaultApi* | [**trustedUsersIdGet**](docs/Api/DefaultApi.md#trustedusersidget) | **GET** /trusted-users/{id} | Get trust information about a verified user
+*DefaultApi* | [**trustedUsersPost**](docs/Api/DefaultApi.md#trusteduserspost) | **POST** /trusted-users | Trust a verified user
+*DefaultApi* | [**trustsIdDelete**](docs/Api/DefaultApi.md#trustsiddelete) | **DELETE** /trusts/{id} | Untrust a Trusted User
 
 
 ## Documentation For Models
