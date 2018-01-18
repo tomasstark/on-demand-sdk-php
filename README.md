@@ -2,9 +2,6 @@
 
 This SDK allows you to call the Sterling Talent Solutions On Demand API.
 
-- API version: 2018-01-17T10:44:23.086-08:00
-- Build package: io.swagger.codegen.languages.PhpClientCodegen
-
 ## Requirements
 
 PHP 5.4.0 and later
