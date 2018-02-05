@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **billing_code** | **string** |  | [optional] 
 **callback** | [**\Oda\Client\Model\CallbackRequest**](CallbackRequest.md) |  | [optional] 
 **candidate_id** | **string** |  | [optional] 
+**end_user_certificate** | **string** |  | [optional] 
 **invite** | [**\Oda\Client\Model\Invite**](Invite.md) |  | [optional] 
 **package_id** | **string** |  | [optional] 
 **reference_codes** | [**\Oda\Client\Model\ReferenceCode[]**](ReferenceCode.md) |  | [optional] 

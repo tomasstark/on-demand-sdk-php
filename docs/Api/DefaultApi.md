@@ -22,6 +22,8 @@ Method | HTTP request | Description
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | Return a list of valid Reference Codes
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+[**screeningsIdDocumentsAttachmentIdGet**](DefaultApi.md#screeningsIdDocumentsAttachmentIdGet) | **GET** /screenings/{id}/documents/{attachmentId} | 
+[**screeningsIdDocumentsGet**](DefaultApi.md#screeningsIdDocumentsGet) | **GET** /screenings/{id}/documents | 
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
 [**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | Create an invite
@@ -859,6 +861,98 @@ No authorization required
 
  - **Content-Type**: */*
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **screeningsIdDocumentsAttachmentIdGet**
+> map[string,string] screeningsIdDocumentsAttachmentIdGet($id, $attachment_id)
+
+
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$id = "id_example"; // string | 
+$attachment_id = "attachment_id_example"; // string | 
+
+try {
+    $result = $api_instance->screeningsIdDocumentsAttachmentIdGet($id, $attachment_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->screeningsIdDocumentsAttachmentIdGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+ **attachment_id** | **string**|  |
+
+### Return type
+
+[**map[string,string]**](../Model/map.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/pdf
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **screeningsIdDocumentsGet**
+> \Oda\Client\Model\CandidateDocumentResponse[] screeningsIdDocumentsGet($id)
+
+
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$id = "id_example"; // string | 
+
+try {
+    $result = $api_instance->screeningsIdDocumentsGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->screeningsIdDocumentsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+
+### Return type
+
+[**\Oda\Client\Model\CandidateDocumentResponse[]**](../Model/CandidateDocumentResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

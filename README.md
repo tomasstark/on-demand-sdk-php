@@ -139,6 +139,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | Get the estimated price of a Package
 *DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | Return a list of valid Reference Codes
 *DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+*DefaultApi* | [**screeningsIdDocumentsAttachmentIdGet**](docs/Api/DefaultApi.md#screeningsiddocumentsattachmentidget) | **GET** /screenings/{id}/documents/{attachmentId} | 
+*DefaultApi* | [**screeningsIdDocumentsGet**](docs/Api/DefaultApi.md#screeningsiddocumentsget) | **GET** /screenings/{id}/documents | 
 *DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 *DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | Get a specific screening
 *DefaultApi* | [**screeningsIdInvitePost**](docs/Api/DefaultApi.md#screeningsidinvitepost) | **POST** /screenings/{id}/invite | Create an invite
