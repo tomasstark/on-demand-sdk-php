@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | Update a candidate
 [**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | Trust a candidate
 [**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | Create a candidate
+[**chargesPost**](DefaultApi.md#chargesPost) | **POST** /charges | Create a capture
 [**healthGet**](DefaultApi.md#healthGet) | **GET** /health | Check the health of the API
 [**identitiesIdGet**](DefaultApi.md#identitiesIdGet) | **GET** /identities/{id} | Get a verified identity
 [**identitiesIdRetryPost**](DefaultApi.md#identitiesIdRetryPost) | **POST** /identities/{id}/retry | Retry creating an identity and get a new set of questions
@@ -22,7 +23,8 @@ Method | HTTP request | Description
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | Return a list of valid Reference Codes
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
-[**screeningsIdDocumentsAttachmentIdGet**](DefaultApi.md#screeningsIdDocumentsAttachmentIdGet) | **GET** /screenings/{id}/documents/{attachmentId} | 
+[**screeningsIdDetailsGet**](DefaultApi.md#screeningsIdDetailsGet) | **GET** /screenings/{id}/details | Get a specific screening
+[**screeningsIdDocumentsAttachmentIdGet**](DefaultApi.md#screeningsIdDocumentsAttachmentIdGet) | **GET** /screenings/{id}/documents/{attachmentId} | Get a Screening attachment in PDF form
 [**screeningsIdDocumentsGet**](DefaultApi.md#screeningsIdDocumentsGet) | **GET** /screenings/{id}/documents | 
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
@@ -35,6 +37,7 @@ Method | HTTP request | Description
 [**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | Get a list of events related to a given subscription
 [**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Get a subscription
 [**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Create a subscription
+[**tokensPost**](DefaultApi.md#tokensPost) | **POST** /tokens | Creates a temporary access token
 [**trustedUsersIdGet**](DefaultApi.md#trustedUsersIdGet) | **GET** /trusted-users/{id} | Get trust information about a verified user
 [**trustedUsersPost**](DefaultApi.md#trustedUsersPost) | **POST** /trusted-users | Trust a verified user
 [**trustsIdDelete**](DefaultApi.md#trustsIdDelete) | **DELETE** /trusts/{id} | Untrust a Trusted User
@@ -82,7 +85,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesGet**
-> \Oda\Client\Model\CandidateResponse candidatesGet($limit, $offset, $given_name, $family_name, $client_reference_id, $email)
+> \Oda\Client\Model\CandidateResponse[] candidatesGet($limit, $offset, $given_name, $family_name, $client_reference_id, $email)
 
 Get a list of Candidates
 
@@ -123,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+[**\Oda\Client\Model\CandidateResponse[]**](../Model/CandidateResponse.md)
 
 ### Authorization
 
@@ -182,7 +185,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **candidatesIdDocumentsPost**
-> candidatesIdDocumentsPost($id, $accept, $file_name)
+> candidatesIdDocumentsPost($id, $content_type, $file_name, $body)
 
 Attach a document to a candidate
 
@@ -195,11 +198,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$accept = "accept_example"; // string | 
+$content_type = "content_type_example"; // string | 
 $file_name = "file_name_example"; // string | 
+$body = "B"; // string | 
 
 try {
-    $api_instance->candidatesIdDocumentsPost($id, $accept, $file_name);
+    $api_instance->candidatesIdDocumentsPost($id, $content_type, $file_name, $body);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->candidatesIdDocumentsPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -211,8 +215,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **accept** | **string**|  |
+ **content_type** | **string**|  | [optional]
  **file_name** | **string**|  | [optional]
+ **body** | **string**|  | [optional]
 
 ### Return type
 
@@ -446,6 +451,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Oda\Client\Model\CandidateResponse**](../Model/CandidateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **chargesPost**
+> \Oda\Client\Model\ChargeResponse chargesPost($charge_request)
+
+Create a capture
+
+Create a capture
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$charge_request = new \Oda\Client\Model\ChargeRequest(); // \Oda\Client\Model\ChargeRequest | 
+
+try {
+    $result = $api_instance->chargesPost($charge_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->chargesPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **charge_request** | [**\Oda\Client\Model\ChargeRequest**](../Model/ChargeRequest.md)|  |
+
+### Return type
+
+[**\Oda\Client\Model\ChargeResponse**](../Model/ChargeResponse.md)
 
 ### Authorization
 
@@ -864,12 +914,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **screeningsIdDetailsGet**
+> \Oda\Client\Model\ScreeningDetailsResponse[] screeningsIdDetailsGet($id)
+
+Get a specific screening
+
+Get a specific screening
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$id = "id_example"; // string | 
+
+try {
+    $result = $api_instance->screeningsIdDetailsGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->screeningsIdDetailsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+
+### Return type
+
+[**\Oda\Client\Model\ScreeningDetailsResponse[]**](../Model/ScreeningDetailsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **screeningsIdDocumentsAttachmentIdGet**
-> map[string,string] screeningsIdDocumentsAttachmentIdGet($id, $attachment_id)
+> string screeningsIdDocumentsAttachmentIdGet($id, $attachment_id, $accept)
 
+Get a Screening attachment in PDF form
 
-
-
+Get a Screening attachment in PDF form
 
 ### Example
 ```php
@@ -879,9 +974,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
 $attachment_id = "attachment_id_example"; // string | 
+$accept = "accept_example"; // string | 
 
 try {
-    $result = $api_instance->screeningsIdDocumentsAttachmentIdGet($id, $attachment_id);
+    $result = $api_instance->screeningsIdDocumentsAttachmentIdGet($id, $attachment_id, $accept);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->screeningsIdDocumentsAttachmentIdGet: ', $e->getMessage(), PHP_EOL;
@@ -895,10 +991,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
  **attachment_id** | **string**|  |
+ **accept** | **string**|  |
 
 ### Return type
 
-[**map[string,string]**](../Model/map.md)
+**string**
 
 ### Authorization
 
@@ -957,7 +1054,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdDocumentsPost**
-> screeningsIdDocumentsPost($id, $accept, $document_type, $party)
+> screeningsIdDocumentsPost($id, $document_type, $party, $content_type, $body)
 
 Attach a document to a Screening
 
@@ -970,12 +1067,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Oda\Client\Api\DefaultApi();
 $id = "id_example"; // string | 
-$accept = "accept_example"; // string | 
 $document_type = "document_type_example"; // string | 
 $party = "party_example"; // string | 
+$content_type = "content_type_example"; // string | 
+$body = "B"; // string | 
 
 try {
-    $api_instance->screeningsIdDocumentsPost($id, $accept, $document_type, $party);
+    $api_instance->screeningsIdDocumentsPost($id, $document_type, $party, $content_type, $body);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->screeningsIdDocumentsPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -987,9 +1085,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **accept** | **string**|  |
  **document_type** | **string**|  |
  **party** | **string**|  |
+ **content_type** | **string**|  | [optional]
+ **body** | **string**|  | [optional]
 
 ### Return type
 
@@ -1097,7 +1196,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdReportGet**
-> map[string,string] screeningsIdReportGet($id, $accept)
+> string screeningsIdReportGet($id, $accept)
 
 Get a Screening report in PDF form
 
@@ -1130,7 +1229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string,string]**](../Model/map.md)
+**string**
 
 ### Authorization
 
@@ -1189,7 +1288,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **screeningsIdReportPdfGet**
-> map[string,string] screeningsIdReportPdfGet($id, $token)
+> string screeningsIdReportPdfGet($id, $token)
 
 Get a Screening report in PDF form
 
@@ -1222,7 +1321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string,string]**](../Model/map.md)
+**string**
 
 ### Authorization
 
@@ -1450,6 +1549,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Oda\Client\Model\SubscriptionResponse**](../Model/SubscriptionResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **tokensPost**
+> \Oda\Client\Model\TokenResponse tokensPost($token_request)
+
+Creates a temporary access token
+
+Creates a temporary access token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Oda\Client\Api\DefaultApi();
+$token_request = new \Oda\Client\Model\TokenRequest(); // \Oda\Client\Model\TokenRequest | 
+
+try {
+    $result = $api_instance->tokensPost($token_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->tokensPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token_request** | [**\Oda\Client\Model\TokenRequest**](../Model/TokenRequest.md)|  |
+
+### Return type
+
+[**\Oda\Client\Model\TokenResponse**](../Model/TokenResponse.md)
 
 ### Authorization
 

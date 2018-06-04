@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **billing_code** | **string** |  | [optional] 
 **callback** | [**\Oda\Client\Model\CallbackResponse**](CallbackResponse.md) |  | [optional] 
 **candidate_id** | **string** |  | [optional] 
+**charge_id** | **string** |  | [optional] 
 **client_criteria_result** | **string** |  | [optional] 
 **dispute** | [**\Oda\Client\Model\Dispute**](Dispute.md) |  | [optional] 
 **id** | **string** |  | [optional] 

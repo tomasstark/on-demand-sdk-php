@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**candidatesIdPut**](docs/Api/DefaultApi.md#candidatesidput) | **PUT** /candidates/{id} | Update a candidate
 *DefaultApi* | [**candidatesIdTrustPost**](docs/Api/DefaultApi.md#candidatesidtrustpost) | **POST** /candidates/{id}/trust | Trust a candidate
 *DefaultApi* | [**candidatesPost**](docs/Api/DefaultApi.md#candidatespost) | **POST** /candidates | Create a candidate
+*DefaultApi* | [**chargesPost**](docs/Api/DefaultApi.md#chargespost) | **POST** /charges | Create a capture
 *DefaultApi* | [**healthGet**](docs/Api/DefaultApi.md#healthget) | **GET** /health | Check the health of the API
 *DefaultApi* | [**identitiesIdGet**](docs/Api/DefaultApi.md#identitiesidget) | **GET** /identities/{id} | Get a verified identity
 *DefaultApi* | [**identitiesIdRetryPost**](docs/Api/DefaultApi.md#identitiesidretrypost) | **POST** /identities/{id}/retry | Retry creating an identity and get a new set of questions
@@ -139,7 +140,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**packagesIdPriceGet**](docs/Api/DefaultApi.md#packagesidpriceget) | **GET** /packages/{id}/price | Get the estimated price of a Package
 *DefaultApi* | [**referenceCodesGet**](docs/Api/DefaultApi.md#referencecodesget) | **GET** /reference-codes | Return a list of valid Reference Codes
 *DefaultApi* | [**screeningsIdAdverseActionsPost**](docs/Api/DefaultApi.md#screeningsidadverseactionspost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
-*DefaultApi* | [**screeningsIdDocumentsAttachmentIdGet**](docs/Api/DefaultApi.md#screeningsiddocumentsattachmentidget) | **GET** /screenings/{id}/documents/{attachmentId} | 
+*DefaultApi* | [**screeningsIdDetailsGet**](docs/Api/DefaultApi.md#screeningsiddetailsget) | **GET** /screenings/{id}/details | Get a specific screening
+*DefaultApi* | [**screeningsIdDocumentsAttachmentIdGet**](docs/Api/DefaultApi.md#screeningsiddocumentsattachmentidget) | **GET** /screenings/{id}/documents/{attachmentId} | Get a Screening attachment in PDF form
 *DefaultApi* | [**screeningsIdDocumentsGet**](docs/Api/DefaultApi.md#screeningsiddocumentsget) | **GET** /screenings/{id}/documents | 
 *DefaultApi* | [**screeningsIdDocumentsPost**](docs/Api/DefaultApi.md#screeningsiddocumentspost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 *DefaultApi* | [**screeningsIdGet**](docs/Api/DefaultApi.md#screeningsidget) | **GET** /screenings/{id} | Get a specific screening
@@ -152,6 +154,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**subscriptionsIdEventsGet**](docs/Api/DefaultApi.md#subscriptionsideventsget) | **GET** /subscriptions/{id}/events | Get a list of events related to a given subscription
 *DefaultApi* | [**subscriptionsIdGet**](docs/Api/DefaultApi.md#subscriptionsidget) | **GET** /subscriptions/{id} | Get a subscription
 *DefaultApi* | [**subscriptionsPost**](docs/Api/DefaultApi.md#subscriptionspost) | **POST** /subscriptions | Create a subscription
+*DefaultApi* | [**tokensPost**](docs/Api/DefaultApi.md#tokenspost) | **POST** /tokens | Creates a temporary access token
 *DefaultApi* | [**trustedUsersIdGet**](docs/Api/DefaultApi.md#trustedusersidget) | **GET** /trusted-users/{id} | Get trust information about a verified user
 *DefaultApi* | [**trustedUsersPost**](docs/Api/DefaultApi.md#trusteduserspost) | **POST** /trusted-users | Trust a verified user
 *DefaultApi* | [**trustsIdDelete**](docs/Api/DefaultApi.md#trustsiddelete) | **DELETE** /trusts/{id} | Untrust a Trusted User
@@ -172,6 +175,8 @@ Class | Method | HTTP request | Description
  - [CandidatePortalLinkResponse](docs/Model/CandidatePortalLinkResponse.md)
  - [CandidateRequest](docs/Model/CandidateRequest.md)
  - [CandidateResponse](docs/Model/CandidateResponse.md)
+ - [ChargeRequest](docs/Model/ChargeRequest.md)
+ - [ChargeResponse](docs/Model/ChargeResponse.md)
  - [Dispute](docs/Model/Dispute.md)
  - [DriversLicense](docs/Model/DriversLicense.md)
  - [ErrorDetail](docs/Model/ErrorDetail.md)
@@ -182,6 +187,7 @@ Class | Method | HTTP request | Description
  - [Interval](docs/Model/Interval.md)
  - [Invite](docs/Model/Invite.md)
  - [InviteResponse](docs/Model/InviteResponse.md)
+ - [JsonNode](docs/Model/JsonNode.md)
  - [KnowledgeBasedAnswer](docs/Model/KnowledgeBasedAnswer.md)
  - [Metrics](docs/Model/Metrics.md)
  - [OneTimeReportLinkResponse](docs/Model/OneTimeReportLinkResponse.md)
@@ -191,6 +197,7 @@ Class | Method | HTTP request | Description
  - [ReferenceCode](docs/Model/ReferenceCode.md)
  - [ReferenceCodesResponse](docs/Model/ReferenceCodesResponse.md)
  - [Schedule](docs/Model/Schedule.md)
+ - [ScreeningDetailsResponse](docs/Model/ScreeningDetailsResponse.md)
  - [ScreeningReport](docs/Model/ScreeningReport.md)
  - [ScreeningRequest](docs/Model/ScreeningRequest.md)
  - [ScreeningResponse](docs/Model/ScreeningResponse.md)
@@ -200,6 +207,8 @@ Class | Method | HTTP request | Description
  - [SubscriptionRequest](docs/Model/SubscriptionRequest.md)
  - [SubscriptionResponse](docs/Model/SubscriptionResponse.md)
  - [SubscriptionScreening](docs/Model/SubscriptionScreening.md)
+ - [TokenRequest](docs/Model/TokenRequest.md)
+ - [TokenResponse](docs/Model/TokenResponse.md)
  - [TrustedUserRequest](docs/Model/TrustedUserRequest.md)
  - [TrustedUserResponse](docs/Model/TrustedUserResponse.md)
  - [VerificationRequest](docs/Model/VerificationRequest.md)
